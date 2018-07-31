@@ -1,0 +1,67 @@
+{% extends 'base.html' %} 
+{% load staticfiles %} 
+{% block css_content %}
+<link rel="stylesheet" href='{% static "/css/category_landing.css" %}'> 
+{% endblock %} 
+
+{% block body_content %}
+
+<!-- Title and Description -->
+
+<div class="container">
+    <h3 class="jumbotron-heading mt-5">Your search for "{{ q }}" returned {{ query_list.count }} results.</h3>
+
+    <!-- Products -->
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                {% for product in products %}
+                <div class="col-xl-3 col-lg-4 col-sm-6">
+                    <div class="card mb-4 box-shadow">
+                        <a href="/p/{{product.bc_sku}}">
+                            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="/media/coming-soon.jpg" data-holder-rendered="true">
+                        </a>
+                        <div class="card-body">
+                            <p class="card-text">{{product.product_description}}</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">6 Comparisons</button>
+                                </div>
+                                <small class="text-muted plp-price">from £4.99</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="container pagination_cont d-flex justify-content-center">
+            <nav aria-label="...">
+                <ul class="pagination">
+                    {% if products.has_previous %}
+
+                    <li class="page-item"><a class="page-link" href="/search/?q={{ q }}&page={{products.previous_page_number}}" tabindex="-1">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="/search/?q={{ q }}&page={{products.previous_page_number}}">{{products.previous_page_number}}</a></li>
+
+                    {% else %}
+                    <li class="page-item disabled"><a class="page-link" href="" tabindex="-1">Previous</a></li>
+                    <li class="page-item disabled"><a class="page-link" href="">-</a></li>
+
+                    {% endif %}
+
+                    <li class="page-item active"><a class="page-link" href="/search/?q={{ q }}&page={{products.number}}">{{ products.number }}<span class="sr-only">(current)</span></a></li>
+
+                    {% if products.has_next %}
+
+                    <li class="page-item"><a class="page-link" href="/search/?q={{ q }}&page={{products.next_page_number}}">{{products.next_page_number}}</a></li>
+                    <li class="page-item"><a class="page-link" href="/search/?q={{ q }}&page={{products.next_page_number}}">Next</a> {% else %}
+                        <li class="page-item disabled"><a class="page-link" href="">-</a></li>
+                        <li class="page-item disabled"><a class="page-link" href="">Next</a></li>
+                        {% endif %}
+                </ul>
+            </nav>
+        </div>
+
+        {% endblock %}

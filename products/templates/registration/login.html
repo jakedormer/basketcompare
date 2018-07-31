@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block css_content %}
+{% endblock %}
+{% block body_content %}
+
+<div class="container text-center">
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <form class="form-signin mt-5" action="{% url 'login' %}" method="post">
+                {% csrf_token %}
+                <img class="mb-4" src="/media/bc_short_logo.png" alt="" width="110" height="90">
+                <h2 class="h3 mb-3 font-weight-normal">Please sign in</h2> 
+                {% for field in form %} 
+                {% if field.label == "Password" %}
+                <label for="{{ field.id_for_label }}" class="sr-only">{{ field.label }}</label>
+                <input type="password" id="{{ field.id_for_label }}" name="{{ field.name }}" class="form-control mt-2" placeholder="{{ field.label }}"> 
+                {% else %}
+                <label for="{{ field.id_for_label }}" class="sr-only">{{ field.label }}</label>
+                <input type="text" id="{{ field.id_for_label }}" name="{{ field.name }}" class="form-control mt-2" placeholder="{{ field.label }}" required autofocus> 
+                {% endif %} 
+                {% endfor %} 
+                {% if form.errors %}
+                <p class="bg-danger py-2 my-2 text-white">Your username or password is incorrect.</p>
+                {% endif %}
+
+                <button class="btn btn-lg btn-success btn-block my-2" type="submit">Sign in</button>
+                <p class="mt-5 mb-3 text-muted">&copy; Basket Compare 2018</p>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

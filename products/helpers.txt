@@ -1,0 +1,24 @@
+from django.conf import settings
+print(settings.BASE_DIR)
+
+// Open python shell
+python manage.py shell
+
+
+// Create user profile for x
+
+from products.models import Profile, Product
+from django.contrib.auth.models import User
+jake = User.objects.get(username="jake")
+jake_profile = Profile.objects.create(user=jake)
+
+p1 = Product.objects.get(bc_sku=172483)
+jake.profile.favourites.all()
+
+
+//Git
+
+git.status
+git.add       file.name
+git.commit
+git push origin master

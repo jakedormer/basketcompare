@@ -1,0 +1,110 @@
+{% extends 'base.html' %} 
+{% load staticfiles %} 
+{% load mathfilters %} 
+{% block css_content %}
+<link rel="stylesheet" href='{% static "/css/pdp.css" %}'> 
+{% endblock %}
+
+{% block body_content %}
+
+<!-- Title -->
+<div class="container">
+    <h1>{{ master_product.product_description }}</h1>
+</div>
+
+<!-- Breadcrumb -->
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/category">Categories</a></li>
+            <li class="breadcrumb-item"><a href="#">{{ master_product.category }}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ master_product.sub_category }}</li>
+        </ol>
+    </nav>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+<!-- Image -->
+<div class="container text-center">
+    <img src="/media/blue-circle.jpg" class="img-responsive" alt="Cinque Terre">
+</div>
+
+
+<div class="container">
+    <hr>
+</div>
+
+<!-- Buttons -->
+<div class="container">
+    <div class="row mb-2">
+        <!-- Add to Project List -->
+        <div class="col-md mb-1 d-flex justify-content-center position-inherit">
+            <button type="button" class="btn btn-outline-primary fixed-button" onclick="myFunction()"><i class="fa fa-plus"></i> Add to Project </button>
+        </div>
+        <!-- Favourite -->
+        <div class="col-md mb-1 d-flex justify-content-center position-inherit">
+            {% if user.is_authenticated %}
+            <form class="form" method="post" action="{% url 'favourites' %}">
+                {% csrf_token %}
+                <input type="hidden" name="bc_sku" value="{{ master_product.bc_sku}}">
+                <button type="submit" name="addtofavourites" class="btn btn-warning fixed-button position-inherit"><i class="fa fa-star"></i> Favourite
+                </button>
+            </form>
+            {% else %}
+            <button type="button" class="btn btn-outline-warning fixed-button position-inherit" data-container="body" data-toggle="popover" data-placement="top" data-content="Please create an account."><i class="fa fa-star"></i> Favourite
+            </button>
+            {% endif %}
+        </div>
+
+        <!-- VAT-->
+        <div class="col-md mb-1 d-flex justify-content-center position-inherit">
+            <button type="button" class="btn btn-outline-danger d-flex justify-content-center fixed-button" id="vat-button" onclick="myFunction()">inc Vat</button>
+        </div>
+    </div>
+</div>
+
+<span class="glyphicon glyphicon-star"></span>
+
+<!-- Table -->
+<div class="container">
+    <div class="table-responsive">
+        <table id="comparison-table" class="table tablesorter">
+            <thead>
+                <tr>
+                    <th class="merchant text-center">Merchant</th>
+                    <th class="d-none d-sm-table-cell description w-25">Description</th>
+                    <th class="incVat text-center">Price</th>
+                    <th class="exVat text-center">Price</th>
+                    <th class="offer">Offer</th>
+                    <th class="d-none d-md-table-cell url-1"></th>
+                    <th class="d-table-cell d-md-none url-2">Go To</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in compared_products %} 
+                {% if item.product_price is not None %}
+                <tr>
+                    <td class="merchant-logo"><img class="d-block mx-auto mb-1 shadow-sm" src="/media/{{ item.merchant }}.png" height=70 width=70>
+                        <a class="fs-12px pt-1" href="https://www.google.com/maps/search/?api=1&query={{ item.merchant }}" target="_blank">
+                            <p class="d-inline">Find Store</p><i class="fas fa-map-marker-alt fa-lg ml-1"></i></a>
+                    </td>
+                    <td class="d-none d-sm-table-cell description">{{ item.product_description }}</td>
+                    <td class="incVat text-success text-center font-weight-bold fs-13">£{{ item.product_price }}</td>
+                    <td class="exVat text-success text-center font-weight-bold fs-13">£{{ item.product_price|div:1.2|floatformat:2 }}</td>
+                    <td class="offer">{{ item.product_offer }}</td>
+                    <td class="d-none d-md-table-cell url-1"><a class="btn btn-success shadow" href="{{ item.product_url }}" role="button" target="_blank">Visit Site</a></td>
+                    <td class="d-table-cell d-md-none url-2"><a class="pin-ic" href="{{ item.product_url }}" target="_blank"><i class="fa fa-angle-right fa-3x right-arrow"></i></a></td>
+                </tr>
+                {% endif %} 
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %} {% block js_content %}
+<script type="text/javascript" src="{% static '/javascript/pdp.js' %}"></script>
+{% endblock %}

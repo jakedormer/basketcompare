@@ -1,0 +1,79 @@
+<!-- Nav Bar -->
+
+<nav class="navbar navbar-expand-md navbar-light fixed-top bg-light z-1600">
+      <a class="navbar-brand d-block d-md-none" href="/">
+      <img src="/media/bc_short_logo.png" height=40 width=60>
+      </a>
+      <a class="navbar-brand d-none d-md-block" href="/">
+        <img src="/media/bc_long_logo.png" height=40 width=200>
+      </a>
+      <form method="GET" class="form-inline mr-auto ml-auto py-1 search-bar w-50 text-center d-none d-sm-block" action="/search">
+          <input class="form-control mr-sm-2 search-input w-50" type="text" placeholder="Search..." name="q" value="{{request.GET.q}}" aria-label="Search">
+          <button type="submit" class="btn btn-success ml-1" type="submit"><i class="fa fa-search"></i></button>
+      </form>
+      <ul class="navbar-nav flex-row mr-lg-0 ml-auto">
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle mr-3" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fa fa-user fa-lg"></i>
+                  <span class="caret"></span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                  {% if user.is_authenticated %}
+                    <a class="dropdown-item text-left" href="/account"><i class="fa fa-user"></i> My Account</a>
+                    <a class="dropdown-item text-left" href="/favourites"><i class="fa fa-star"></i> Favourites</a>
+                    <a class="dropdown-item text-left" href="/logout"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
+                  {% else %}
+                    <a class="dropdown-item text-left" href="/login"><i class="fas fa-sign-out-alt"></i> Sign In</a>
+                    <a class="dropdown-item text-left" href="/register"><i class="fa fa-user"></i> Register</a>
+                  {% endif %}
+                </div>
+            </li>
+        </ul>
+        <button class="navbar-toggler ml-lg-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars fa-lg"></i>
+        </button>
+</nav>
+
+    <nav class="navbar navbar-expand-md navbar-white bg-white mt-2 border-grey-1 shadow-sm z-1500 w-100 second-nav">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <form method="GET" class="form-inline search-bar text-center d-inline d-sm-none" action="/search">
+                    <input class="form-control d-inline mr-sm-2 w-75" type="text" placeholder="Search..." name="q" value="{{request.GET.q}}" aria-label="Search">
+                    <button type="submit" class="btn btn-success ml-1 d-inline float-right" type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/category/bricks-blocks">Bricks & Blocks</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cement & Aggregates</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Plaster & Plasterboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Painting & Decorating</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Electrical</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Gardens & Landscaping</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Plumbing & Heating</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">All Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Other Categories</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+<!-- End Nav Bar -->
+
+

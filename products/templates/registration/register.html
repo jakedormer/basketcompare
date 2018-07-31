@@ -1,0 +1,61 @@
+{% extends 'base.html' %} 
+{% load staticfiles %} 
+{% block css_content %} 
+{% endblock %} 
+{% block body_content %}
+
+<div class="container">
+
+    <div class="pricing-header px-3 py-1 mt-3 mx-auto text-center">
+        {% if user.is_authenticated %}
+        <h1 class="display-4">You are already registered</h1> {% else %}
+        <h1 class="display-4">Register</h1> 
+        {% endif %}
+        <p class="lead">Register with us and create an account to get access to the great features listed below.</p>
+    </div>
+</div>
+
+<!-- 3 USP's -->
+<div class="container">
+    <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 box-shadow">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Favourites</h4>
+            </div>
+            <div class="card-body">
+                <i class="fa fa-star fa-5x"></i>
+            </div>
+        </div>
+        <div class="card mb-4 box-shadow">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Project Lists</h4>
+            </div>
+            <div class="card-body">
+                <i class="fas fa-th-list fa-5x"></i>
+            </div>
+        </div>
+        <div class="card mb-4 box-shadow">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Location</h4>
+            </div>
+            <div class="card-body">
+                <i class="fas fa-map-pin fa-5x"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Form -->
+<div class="container">
+    <form class="row justify-content-center" method="post" <!-- action="{% url 'register' %} -->">
+        {% csrf_token %}
+        <div class="col-xl-6 col-md-9 col-xs-10 justify-content-center">
+            {{ form }}
+            <button class="btn btn-success my-3 shadow w-100 text-center" type="submit" value="Register">Register</button>
+        </div>
+    </form>
+</div>
+</div>
+</div>
+
+{% endblock %}

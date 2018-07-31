@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block css_content %}
+{% endblock %}
+{% block body_content %}
+
+<div class="container">
+    <h1 class="mt-5 mb-4 text-center">My Favourites</h1>
+    <div class="table-responsive">
+        <table id="comparison-table" class="table tablesorter">
+            <thead>
+                <tr>
+                    <th class="product-image"></th>
+                    <th class="description">Description</th>
+                    <th class="best-price text-center">Best Price</th>
+                    <th class="remove"></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if favourites %} 
+                {% for product in favourites %}
+                <tr>
+                    <td class="product-image"><img src="/media/blue-circle.jpg" height=70 width=70></td>
+                    <td class="description"><a href="/{{product.product_slug}}/p/{{product.bc_sku}}">{{ product.product_description }}</a></td>
+                    <td class="min-price text-success text-center font-weight-bold fs-13">£{{ product.min_price }}</td>
+                    <td class="rubbish">
+                        <form class="form" method="post" action="{% url 'favourites' %}">
+                            {% csrf_token %}
+                            <input type="hidden" name="bc_sku" value="{{ product.bc_sku}}">
+                            <button type="submit" name="removefromfavourites"><i class="fas fa-trash-alt"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %} 
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+
+    {% if not favourites %}
+    <h3 class="text-center lead">You currently have no products in your favourites</h2>
+{% endif %}
+    </div>
+
+{% endblock %}

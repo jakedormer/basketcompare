@@ -1,0 +1,32 @@
+{% extends 'base.html' %} {% load staticfiles %} {% block css_content %}
+<link rel="stylesheet" href='{% static "/css/category_landing.css" %}'> {% endblock %} {% block body_content %}
+
+<!-- Title and Description -->
+
+<div class="container">
+    <h1 class="jumbotron-heading mt-3">{{category.category_name}}</h1>
+    <p class="lead text-muted">Browse the collection {{category.category_name | lower}} price comparisons.</p>
+</div>
+
+<!-- Categories -->
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            {% for subcategory in sub_categories %}
+            <div class="col-xl-3 col-lg-4 col-sm-6">
+                <div class="card mb-4 box-shadow">
+                    <a href="/c/{{subcategory.subcategory_name|lower}}" <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="/media/coming-soon.jpg" data-holder-rendered="true"></a>
+                        <div class="card-body">
+                            <p class="card-text">{{subcategory.subcategory_name}}</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p>we love bricks wooooo</p>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
