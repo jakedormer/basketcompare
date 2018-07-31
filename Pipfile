@@ -10,6 +10,8 @@ django-mathfilters = "==0.4.0"
 django-heroku = "*"
 whitenoise = "*"
 gunicorn = "*"
+dj-database-url = "*"
+"psycopg2-binary" = "*"
 
 [dev-packages]
 
