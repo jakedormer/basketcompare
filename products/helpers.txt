@@ -22,3 +22,6 @@ git.status
 git.add       file.name
 git.commit
 git push origin master
+
+*Check for all remote repositories
+git remote -v
