@@ -9,6 +9,7 @@ django-import-export = "==1.0.1"
 django-mathfilters = "==0.4.0"
 django-heroku = "*"
 whitenoise = "*"
+gunicorn = "*"
 
 [dev-packages]
 
