@@ -20,6 +20,7 @@ from django.urls import path, include
 from django.conf.urls import url
 from products import views
 from django.contrib.auth.views import login
+import products.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
