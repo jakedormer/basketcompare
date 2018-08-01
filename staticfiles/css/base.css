@@ -1,0 +1,52 @@
+body {
+    padding-top: 70px;
+  }
+
+/* Navigation
+-------------------------------------------------- */
+
+.dropdown-toggle::after {
+	display:none;
+}
+
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+
+.nav-item {
+	text-align:center;
+}
+
+.dropdown-menu{
+    margin-top: 0!important;
+}
+
+.project-list {
+  color: white !important;
+}
+
+/* Footer
+-------------------------------------------------- */
+
+.page-footer {
+    background-color: #343a40;
+    color: white;
+}
+
+.footer-copyright {
+	background-color:white;
+	color: #343a40;
+}
+
+footer {
+  padding-top: ;
+  padding-bottom: ;
+
+}
+
+.footer-link a {
+	color: white;
+}
+
+
+

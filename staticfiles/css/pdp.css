@@ -1,0 +1,91 @@
+h1 {
+	text-align:center;
+	margin-top:1em;
+	margin-bottom:0.2em;
+}
+
+.breadcrumb {
+	background-color:white;
+}
+
+
+/* VAT Toggle
+-------------------------------------------------- */
+
+.onoffswitch {
+    position: relative; width: 95px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+    position:fixed;
+    right:0;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #EDE8E8; border-radius: 24px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 32px; padding: 0; line-height: 32px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "inc VAT";
+    padding-left: 10px;
+    background-color: #2d56e0; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "ex VAT";
+    padding-right: 10px;
+    background-color: #FF1919; color: #FFFFFF;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 9px; height: 9px; margin: 11.5px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 59px;
+    border: 2px solid #EDE8E8; border-radius: 24px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+
+/* Price Table
+-------------------------------------------------- */
+
+.exVat {
+    display:none;
+}
+
+.table thead th {
+    border-bottom: 0px solid #dee2e6;
+}
+
+td { 
+    word-wrap:break-word;
+
+}
+
+.merchant-logo {
+    text-align:center;
+}
+
+.merchant-logo img {
+    border: solid 3px #bfbfbf;
+    border-radius: 1em;
+
+}
+
+.right-arrow {
+    font-size: 36px;
+}
