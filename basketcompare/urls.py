@@ -23,17 +23,17 @@ from django.contrib.auth.views import login
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('account/', views.account, name='account'),
-    url(r'^login/$', views.login, name='login'),
-    url(r'^register/', views.sign_up, name='register'),
-    path('', views.home, name='home'),
-    path('about/', views.about, name='about'),
-    path('<slug>/p/<int:code>/', views.pdp, name='pdp'),
-    url(r'^c/(?P<subcategory_slug>[-\w]+)/$', views.plp, name='plp'),
-    url(r'^category/(?P<category_slug>[-\w]+)/$', views.category_landing, name='category_landing'),
-    url(r'^search', views.search_page, name='category_landing'),
-    url(r'^favourites/', views.favourites, name='favourites'),
-    url(r'^logout/$', views.logout, name='logout'),
+    path('account/', products.views.account, name='account'),
+    url(r'^login/$', products.views.login, name='login'),
+    url(r'^register/', products.views.sign_up, name='register'),
+    path('', products.views.home, name='home'),
+    path('about/', products.views.about, name='about'),
+    path('<slug>/p/<int:code>/', products.views.pdp, name='pdp'),
+    url(r'^c/(?P<subcategory_slug>[-\w]+)/$', products.views.plp, name='plp'),
+    url(r'^category/(?P<category_slug>[-\w]+)/$', products.views.category_landing, name='category_landing'),
+    url(r'^search', products.views.search_page, name='category_landing'),
+    url(r'^favourites/', products.views.favourites, name='favourites'),
+    url(r'^logout/$', products.views.logout, name='logout'),
     # url (regex, view, template to render)
 ]
 
