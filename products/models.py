@@ -74,7 +74,7 @@ class Product(models.Model):
 	product_price 					= models.DecimalField(null=True, blank=True, max_digits=10, decimal_places=2)
 	product_offer 					= models.CharField(null=True, blank=True, max_length=250)
 
-	product_slug					= models.SlugField(null=True, blank=True)
+	product_slug					= models.SlugField(null=True, blank=True, max_length=100)
 
 
 	def save(self, *args, **kwargs):

@@ -25,3 +25,6 @@ git push origin master
 
 *Check for all remote repositories
 git remote -v
+
+* Start Heroku locally
+heroku local web -f Procfile.windows
