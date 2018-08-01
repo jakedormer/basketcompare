@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname((__file__)))
 SECRET_KEY = 'kse8ckn79d_dznk)&!x0u7c%+qx1zh#qtgqwaxqfxvrn7ni_9y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 if DEBUG:
     ALLOWED_HOSTS = []
@@ -128,7 +128,7 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-MEDIA_URL = '/media/'
+MEDIA_URL = 'static/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "static_cdn", "media")
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
@@ -137,14 +137,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static_cdn")
 
 
 
-
-# Login redirect
-
-# Login via Email
-LOGIN_VIA_EMAIL = True
-
 LOGOUT_REDIRECT_URL = '/'
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 django_heroku.settings(locals())
