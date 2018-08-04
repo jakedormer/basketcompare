@@ -32,6 +32,9 @@ else:
     ALLOWED_HOSTS = ['hidden-sands-73111.herokuapp.com']
 
 
+ADMINS = [
+    ('Jake', 'jakenwr@hotmail.co.uk'),
+]
 
 # Application definition
 
@@ -141,3 +144,4 @@ LOGOUT_REDIRECT_URL = '/'
 
 
 django_heroku.settings(locals())
+
