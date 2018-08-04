@@ -2,6 +2,7 @@ from .base import *
 import django_heroku
 
 DEBUG = False
+DEBUG_PROPAGATE_EXCEPTIONS=True
 
 ALLOWED_HOSTS = ['hidden-sands-73111.herokuapp.com']
 
@@ -19,3 +20,4 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_PASSWORD = 'vr3fnnr76312'
 SERVER_EMAIL = 'django@hidden-sands-73111.herokuapp.com'
+
