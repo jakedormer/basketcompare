@@ -144,7 +144,4 @@ LOGOUT_REDIRECT_URL = '/'
 
 
 django_heroku.settings(locals())
-<<<<<<< HEAD
 
-=======
->>>>>>> 36a3f6040312022b286ef4f3d029c19748a7f044
