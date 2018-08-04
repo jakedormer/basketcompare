@@ -38,3 +38,6 @@ heroku local web -f Procfile.windows
 5. git commit -m "added migration for app someapp"
 6. git push heroku
 7. heroku run python manage.py migrate
+
+
+heroku config:set DJANGO_SETTINGS_MODULE=basketcompare.settings.production
