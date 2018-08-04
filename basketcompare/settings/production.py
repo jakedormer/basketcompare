@@ -5,12 +5,14 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['hidden-sands-73111.herokuapp.com']
 
-MIDDLEWARE += ['whitenoise.middleware.WhiteNoiseMiddleware']
-
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-
+MIDDLEWARE_CLASSES += ['whitenoise.middleware.WhiteNoiseMiddleware',]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 django_heroku.settings(locals())
 

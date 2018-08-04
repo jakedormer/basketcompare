@@ -35,10 +35,9 @@ urlpatterns = [
     url(r'^search', products.views.search_page, name='category_landing'),
     url(r'^favourites/', products.views.favourites, name='favourites'),
     url(r'^logout/$', products.views.logout, name='logout'),
-    # url (regex, view, template to render)
 ]
 
 
-if settings.DEBUG:
-	urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-	urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# if settings.DEBUG:
+# 	urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+# 	urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
