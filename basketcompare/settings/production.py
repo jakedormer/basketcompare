@@ -5,7 +5,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['hidden-sands-73111.herokuapp.com']
 
-STATIC_URL = '/static/'
+STATIC_URL = '/staticfiles/'
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 MIDDLEWARE += ['whitenoise.middleware.WhiteNoiseMiddleware']
