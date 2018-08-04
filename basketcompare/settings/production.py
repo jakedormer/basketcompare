@@ -2,7 +2,6 @@ from .base import *
 import django_heroku
 
 DEBUG = False
-DEBUG_PROPAGATE_EXCEPTIONS=True
 
 ALLOWED_HOSTS = ['hidden-sands-73111.herokuapp.com']
 
