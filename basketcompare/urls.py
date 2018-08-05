@@ -39,6 +39,3 @@ urlpatterns = [
 urlpatterns += static(base.STATIC_URL, document_root=base.STATIC_ROOT)
 urlpatterns += static(base.MEDIA_URL, document_root=base.MEDIA_ROOT)
 
-
-handler404 = 'products.views.404.html'
-handler500 = 'products.views.500.html'
