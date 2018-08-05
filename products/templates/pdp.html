@@ -1,6 +1,12 @@
 {% extends 'base.html' %} 
 {% load static %} 
-{% load mathfilters %} 
+{% load mathfilters %}
+
+{% block meta_content %}
+    <title>{{ master_product.product_description }} | Basket Compare | UK</title>
+    <meta name="description" content="Compare the prices of {{ master_product.product_description }} across a number of merchants in the UK and get the best price. ">
+{% endblock %}  
+
 {% block css_content %}
 <link rel="stylesheet" href='{% static "css/pdp.css" %}'> 
 {% endblock %}

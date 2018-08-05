@@ -3,10 +3,12 @@ from django.template.defaultfilters import slugify
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from django.urls import reverse
 
 class Category(models.Model):
 	category_name 					= models.CharField(primary_key=True, max_length=120, null=False, blank=True, unique=True)
 	category_slug 					= models.SlugField(unique=True, null=True, blank=True)
+	category_description			= models.TextField(null=True, blank=True)	
 
 	def save(self, *args, **kwargs):
 		self.category_slug = slugify(self.category_name)
@@ -14,6 +16,9 @@ class Category(models.Model):
 
 	def __str__(self):
 		return self.category_name
+
+	def get_absolute_url(self):
+		return reverse('category_landing', args=[self.category_slug])
 
 
 class SubCategory(models.Model):
@@ -28,6 +33,9 @@ class SubCategory(models.Model):
 
 	def __str__(self):
 		return self.subcategory_name
+
+	def get_absolute_url(self):
+		return reverse('plp', args=[self.subcategory_slug])
 
 class Merchant(models.Model):
 
@@ -83,6 +91,9 @@ class Product(models.Model):
 
 	def __str__(self):
 		return self.product_description
+
+	def get_absolute_url(self):
+		return reverse('pdp', args=[self.product_slug, self.bc_sku])
 
 	# @property
 	# def min_price(self):

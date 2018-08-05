@@ -1,4 +1,12 @@
-{% extends 'base.html' %} {% load staticfiles %} {% block css_content %}
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block meta_content %}
+    <title>{{ category.category_name }} | Basket Compare | UK</title>
+    <meta name="description" content="Compare the prices of {{ category.category_name }} across a number of merchants in the UK. ">
+{% endblock %}  
+
+{% block css_content %}
 <link rel="stylesheet" href='{% static "css/category_landing.css" %}'> 
 {% endblock %} 
 {% block body_content %}
@@ -21,7 +29,7 @@
                         <div class="card-body">
                             <p class="card-text">{{subcategory.subcategory_name}}</p>
                             <div class="d-flex justify-content-between align-items-center">
-                                <p>we love bricks wooooo</p>
+                                <p>{{subcategory.subcategory_description}}</p>
                             </div>
                         </div>
                 </div>

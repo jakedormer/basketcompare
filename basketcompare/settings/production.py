@@ -6,7 +6,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['hidden-sands-73111.herokuapp.com']
 
 MIDDLEWARE += ['whitenoise.middleware.WhiteNoiseMiddleware',]
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 STATICFILES_DIRS = (
@@ -15,10 +15,10 @@ STATICFILES_DIRS = (
 
 django_heroku.settings(locals())
 
-EMAIL_HOST_USER = 'app104453826@heroku.com'
+EMAIL_HOST_USER = SENDGRID_PASSWORD
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_PASSWORD = 'vr3fnnr76312'
+EMAIL_HOST_PASSWORD = SENDGRID_USERNAME
 SERVER_EMAIL = 'django@hidden-sands-73111.herokuapp.com'
 

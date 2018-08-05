@@ -1,5 +1,11 @@
 {% extends 'base.html' %} 
-{% load static %} 
+{% load static %}
+
+{% block meta_content %}
+    <title>Basket Compare | Compare the prices of building materials | UK</title>
+    <meta name="description" content="The UK comparison site for building materials. Helping you get the best price">
+{% endblock %}
+
 {% block css_content %}
 <link rel="stylesheet" href='{% static "css/home.css" %}'> 
 {% endblock %} 
