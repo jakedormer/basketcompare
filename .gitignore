@@ -6,7 +6,6 @@ bin/
 Include/
 pip-selfcheck.json
 Lib/
-static/
 media/
 development.py
 
