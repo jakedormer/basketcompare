@@ -41,3 +41,5 @@ heroku local web -f Procfile.windows
 
 
 heroku config:set DJANGO_SETTINGS_MODULE=basketcompare.settings.production
+
+So if you are trying to ignore this file after the initial commit, run this: git rm --cached settings.py, and you should be good to go.
