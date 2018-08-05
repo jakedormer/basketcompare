@@ -7,7 +7,7 @@ Include/
 pip-selfcheck.json
 Lib/
 static/
-/media
+media/
 
 # C extensions
 *.so
