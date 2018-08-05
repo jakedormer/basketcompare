@@ -35,7 +35,7 @@
 
 <!-- Image -->
 <div class="container text-center">
-    <img src='{% static "/media/blue-circle.jpg" %}' class="img-responsive" alt="Cinque Terre">
+    <img src='{% static "" %}' class="img-responsive" alt="Cinque Terre">
 </div>
 
 
@@ -93,7 +93,7 @@
                 {% for item in compared_products %} 
                 {% if item.product_price is not None %}
                 <tr>
-                    <td class="merchant-logo"><img class="d-block mx-auto mb-1 shadow-sm" src="/media/{{ item.merchant }}.png" height=70 width=70>
+                    <td class="merchant-logo"><img class="d-block mx-auto mb-1 shadow-sm" src="" height=70 width=70>
                         <a class="fs-12px pt-1" href="https://www.google.com/maps/search/?api=1&query={{ item.merchant }}" target="_blank">
                             <p class="d-inline">Find Store</p><i class="fas fa-map-marker-alt fa-lg ml-1"></i></a>
                     </td>
