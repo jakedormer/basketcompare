@@ -50,7 +50,7 @@ body {
 -------------------------------------------------- */
 
 .home-bg {
-	background-image: url("/static/media/home/searching.jpg");
+	background-image: url("https://s3.eu-west-2.amazonaws.com/basketcompare-core/media/home/searching.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
   width: 100%;
