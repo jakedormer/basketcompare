@@ -2,7 +2,7 @@ from .base import *
 import django_heroku
 
 DEBUG = False
-
+SECRET_KEY = os.environ.get('SECRET_KEY', 'my-default-secret-key')
 ROOT_URLCONF = 'basketcompare.urls.url_production'
 
 django_heroku.settings(locals())
