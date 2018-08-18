@@ -39,7 +39,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'basketcompare.urls'
 
 TEMPLATES = [
     {

@@ -1,12 +1,20 @@
 from .base import *
 import django_heroku
 
+
+
 DEBUG = False
-SECRET_KEY = os.environ['SECRET_KEY']
+ROOT_URLCONF = 'basketcompare.urls.url_production'
+django_heroku.settings(locals())
+
+try:
+	SECRET_KEY = os.getenv('SECRET_KEY', 0)
+except:
+	pass
 
 ALLOWED_HOSTS = ['hidden-sands-73111.herokuapp.com']
 
-django_heroku.settings(locals())
+
 
 EMAIL_HOST_USER = os.environ['SENDGRID_PASSWORD']
 EMAIL_HOST = 'smtp.sendgrid.net'
