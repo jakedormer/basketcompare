@@ -1,16 +1,14 @@
 from .base import *
 import django_heroku
 
-
-
 DEBUG = False
+
 ROOT_URLCONF = 'basketcompare.urls.url_production'
+
 django_heroku.settings(locals())
 
-try:
-	SECRET_KEY = os.getenv('SECRET_KEY', 0)
-except:
-	pass
+SECRET_KEY = os.getenv('SECRET_KEY')
+
 
 ALLOWED_HOSTS = ['hidden-sands-73111.herokuapp.com']
 
