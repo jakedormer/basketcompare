@@ -8,8 +8,6 @@ from django.contrib.auth.views import login, PasswordResetView, PasswordResetDon
 import products.views
 from basketcompare.settings import base
 from django.contrib.sitemaps.views import sitemap
-import os, socket
-
 from products.sitemaps import Product_Sitemap, Category_Sitemap, SubCategory_Sitemap, Fixed_Sitemap
 
 basket_compare_sitemaps = {

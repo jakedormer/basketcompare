@@ -10,7 +10,10 @@ django_heroku.settings(locals())
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 
-ALLOWED_HOSTS = ['hidden-sands-73111.herokuapp.com']
+ALLOWED_HOSTS = [
+	'hidden-sands-73111.herokuapp.com',
+	'basketcompare.co.uk',
+]
 
 
 
