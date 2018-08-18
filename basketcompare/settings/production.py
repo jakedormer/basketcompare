@@ -11,7 +11,7 @@ django_heroku.settings(locals())
 
 ALLOWED_HOSTS = [
 	'hidden-sands-73111.herokuapp.com',
-	'basketcompare.co.uk',
+	'.basketcompare.co.uk',
 ]
 
 
