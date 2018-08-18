@@ -43,6 +43,20 @@ td {
 /* Buttons
 -------------------------------------------------- */
 
+.fixed-button-atp {
+    width: 185px;
+}
+
 .fixed-button {
-    width: 170px;
+    width: 234px;
+}
+
+.atp-input {
+    color: #007bff;
+    border: solid 1px #007bff;
+    border-radius: .25rem;
+    width: 44px;
+    padding-top:4px;
+    padding-bottom: 8px;
+    display: we;
 }

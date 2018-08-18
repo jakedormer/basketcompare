@@ -1,10 +1,10 @@
 <!-- Nav Bar -->
-<nav class="navbar navbar-expand-md navbar-light fixed-top bg-light z-1600">
+<nav class="navbar navbar-expand-md navbar-light fixed-top bg-dark z-1600">
       <a class="navbar-brand d-block d-md-none" href="/">
-      <img src='' height=40 width=60>
+      <img src="{{ MEDIA_URL }}bc_logos/bc_short_logo_white.png" height=40 width=50>
       </a>
       <a class="navbar-brand d-none d-md-block" href="/">
-        <img src='' height=40 width=200>
+        <img src="{{ MEDIA_URL }}bc_logos/bc_long_logo_whitegreen.png" height=40 width=200>
       </a>
       <form method="GET" class="form-inline mr-auto ml-auto py-1 search-bar w-50 text-center d-none d-sm-block" action="/search">
           <input class="form-control mr-sm-2 search-input w-50" type="text" placeholder="Search..." name="q" value="{{request.GET.q}}" aria-label="Search">
@@ -13,7 +13,7 @@
       <ul class="navbar-nav flex-row mr-lg-0 ml-auto">
           <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle mr-3" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="fa fa-user fa-lg"></i>
+                  <i class="fa fa-user fa-lg text-white"></i>
                   <span class="caret"></span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
@@ -29,7 +29,7 @@
             </li>
         </ul>
         <button class="navbar-toggler ml-lg-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars fa-lg"></i>
+            <i class="fas fa-bars fa-lg text-white"></i>
         </button>
 </nav>
 

@@ -2,6 +2,8 @@ from django.contrib import admin
 from import_export import resources
 from .models import Product, Category, SubCategory, Profile, Merchant
 from import_export.admin import ImportExportModelAdmin, ImportExportMixin, ImportMixin, ExportActionModelAdmin
+from django.contrib.auth.admin import UserAdmin
+from django.contrib.auth.models import User
 
 class productAdmin(admin.ModelAdmin):
 	class Meta:
@@ -45,3 +47,11 @@ class profileAdmin(admin.ModelAdmin):
 
 admin.site.register(Profile, profileAdmin)
 
+class MyUserAdmin(UserAdmin):
+    ordering = ('date_joined', )
+
+    list_display = ('username', 'email', 'date_joined', 'last_login', 'first_name', 'last_name', 'is_staff')
+
+# finally replace the default UserAdmin with yours
+admin.site.unregister(User)
+admin.site.register(User, MyUserAdmin)

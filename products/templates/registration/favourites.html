@@ -10,9 +10,18 @@
 {% endblock %}
 {% block body_content %}
 
-<div class="container">
-    <h1 class="mt-5 mb-4 text-center">My Favourites</h1>
-    <div class="table-responsive">
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-3 mt-3 ">
+            <div class="list-group ">
+                <a href="/account" class="list-group-item list-group-item-action"><i class="fa fa-user"></i> My Account</a>
+                <a href="/favourites" class="list-group-item list-group-item-action active"><i class="fa fa-star"></i> Favourites</a>
+                <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-th-list"></i> Project List</a>
+
+            </div>
+        </div>
+        <div class="col-md-9 card mt-3">
+        <div class="table-responsive mt-3">
         <table id="comparison-table" class="table tablesorter">
             <thead>
                 <tr>
@@ -41,11 +50,16 @@
                 {% endif %}
             </tbody>
         </table>
-    </div>
-
     {% if not favourites %}
-    <h3 class="text-center lead">You currently have no products in your favourites</h2>
-{% endif %}
+    <div class="container">
+    <h3 class="text-center lead mt-3">You currently have no products in your favourites</h2>
     </div>
+    {% endif %}
+    </div>
+</div>
+</div>
+</div>
+
+
 
 {% endblock %}

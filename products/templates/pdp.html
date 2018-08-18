@@ -47,11 +47,16 @@
 <div class="container">
     <div class="row mb-2">
         <!-- Add to Project List -->
-        <div class="col-md mb-1 d-flex justify-content-center position-inherit">
-            <button type="button" class="btn btn-outline-primary fixed-button" onclick="myFunction()"><i class="fa fa-plus"></i> Add to Project </button>
+        <div class="col-lg-4 mb-1 d-flex justify-content-center position-inherit">
+            <form class="d-inline">
+            <input type="hidden" name="bc_sku" value="{{ master_product.bc_sku}}">
+            <input type="number" name="quantity" class="atp-input text-center" value=1>
+            <button type="submit" class="ml-0 btn btn-outline-primary fixed-button-atp" name="addtoproject"><i class="fa fa-plus"></i> Add to Project 
+            </button>
+            </form>
         </div>
         <!-- Favourite -->
-        <div class="col-md mb-1 d-flex justify-content-center position-inherit">
+        <div class="col-lg-4 mb-1 d-flex justify-content-center position-inherit">
             {% if user.is_authenticated %}
             <form class="form" method="post" action="{% url 'favourites' %}">
                 {% csrf_token %}
@@ -66,7 +71,7 @@
         </div>
 
         <!-- VAT-->
-        <div class="col-md mb-1 d-flex justify-content-center position-inherit">
+        <div class="col-lg-4 mb-1 d-flex justify-content-center position-inherit">
             <button type="button" class="btn btn-outline-danger d-flex justify-content-center fixed-button" id="vat-button" onclick="myFunction()">inc Vat</button>
         </div>
     </div>
@@ -92,8 +97,10 @@
             <tbody>
                 {% for item in compared_products %} 
                 {% if item.product_price is not None %}
+                {% static "" as base_url %}
                 <tr>
-                    <td class="merchant-logo"><img class="d-block mx-auto mb-1 shadow-sm" src="" height=70 width=70>
+                    <!-- <td class="merchant-logo"><img class="d-block mx-auto mb-1 shadow-sm" src="{{ base_url }}media/merchant_logos/{{ item.merchant}}.png" height=70 width=70> -->
+                    <td class="merchant-logo"><img class="d-block mx-auto mb-1 shadow-sm" src="{{ MEDIA_URL }}merchant_logos/{{ item.merchant}}.png" height=70 width=70>
                         <a class="fs-12px pt-1" href="https://www.google.com/maps/search/?api=1&query={{ item.merchant }}" target="_blank">
                             <p class="d-inline">Find Store</p><i class="fas fa-map-marker-alt fa-lg ml-1"></i></a>
                     </td>
@@ -111,6 +118,7 @@
     </div>
 </div>
 
-{% endblock %} {% block js_content %}
+{% endblock %} 
+{% block js_content %}
 <script type="text/javascript" src="{% static 'javascript/pdp.js' %}"></script>
 {% endblock %}

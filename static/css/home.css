@@ -50,7 +50,7 @@ body {
 -------------------------------------------------- */
 
 .home-bg {
-	background-image: url("");
+	background-image: url("/static/media/home/searching.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
   width: 100%;
