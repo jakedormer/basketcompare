@@ -6,7 +6,7 @@ from django.conf.urls import url
 from products import views
 from django.contrib.auth.views import login, PasswordResetView, PasswordResetDoneView, PasswordResetConfirmView, PasswordResetCompleteView
 import products.views
-from basketcompare.settings import development, production
+from basketcompare.settings import base, development, production
 from django.contrib.sitemaps.views import sitemap
 import os, socket
 
@@ -40,9 +40,9 @@ urlpatterns = [
     url(r'^reset/done/$', PasswordResetDoneView.as_view(template_name="registration/password_reset_complete.html"), name='password_reset_complete'),
     ]
 
+urlpatterns += static(base.STATIC_URL, document_root=base.STATIC_ROOT)
+
 if "DESKTOP" in socket.gethostname():
-    urlpatterns += static(development.STATIC_URL, document_root=development.STATIC_ROOT)
     urlpatterns += static(development.MEDIA_URL, document_root=development.MEDIA_ROOT)
 else:
-    urlpatterns += static(production.STATIC_URL, document_root=production.STATIC_ROOT)
     urlpatterns += static(production.MEDIA_URL, document_root=production.MEDIA_ROOT)
