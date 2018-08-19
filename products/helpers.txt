@@ -51,3 +51,8 @@ So if you are trying to ignore this file after the initial commit, run this: git
 If making a change to a static file.
 1) Collectstatic on local
 2) Push to git.
+
+
+<!-- {% static "" as base_url %} -->
+
+<!-- <td class="merchant-logo"><img class="d-block mx-auto mb-1 shadow-sm" src="{{ base_url }}media/merchant_logos/{{ item.merchant}}.png" height=70 width=70> -->
