@@ -107,3 +107,5 @@ STATICFILES_DIRS = [
 ]
 
 
+STATICFILES_STORAGE = 'basketcompare.storage.WhiteNoiseStaticFilesStorage'
+
