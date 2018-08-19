@@ -97,7 +97,7 @@
             <tbody>
                 {% for item in compared_products %} 
                 {% if item.product_price is not None %}
-                {% static "" as base_url %}
+                <!-- {% static "" as base_url %} -->
                 <tr>
                     <!-- <td class="merchant-logo"><img class="d-block mx-auto mb-1 shadow-sm" src="{{ base_url }}media/merchant_logos/{{ item.merchant}}.png" height=70 width=70> -->
                     <td class="merchant-logo"><img class="d-block mx-auto mb-1 shadow-sm" src="{{ MEDIA_URL }}merchant_logos/{{ item.merchant}}.png" height=70 width=70>
