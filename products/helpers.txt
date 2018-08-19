@@ -41,8 +41,6 @@ heroku local web -f Procfile.windows
 
 
 Git Remove Directory and Files
-
-
 git rm -r --cached folder * make sure you are in src.
 
 heroku config:set DJANGO_SETTINGS_MODULE=basketcompare.settings.production
@@ -50,5 +48,6 @@ heroku config:set DJANGO_SETTINGS_MODULE=basketcompare.settings.production
 So if you are trying to ignore this file after the initial commit, run this: git rm --cached settings.py, and you should be good to go.
 
 
-How To Deploy:
-1) git status
+If making a change to a static file.
+1) Collectstatic on local
+2) Push to git.
