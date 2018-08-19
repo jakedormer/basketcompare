@@ -107,5 +107,5 @@ STATICFILES_DIRS = [
 ]
 
 
-STATICFILES_STORAGE = 'basketcompare.storage.WhiteNoiseStaticFilesStorage'
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 
