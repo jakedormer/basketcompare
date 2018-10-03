@@ -13,9 +13,9 @@
 <div class="container text-center">
     <div class="row justify-content-center">
         <div class="col-lg-4 col-md-6 col-sm-9">
-            <form class="form-signin mt-5" action="{% url 'login' %}" method="post">
+            <form class="form-signin mt-5 px-3 border border-light" action="{% url 'login' %}" method="post">
                 {% csrf_token %}
-                <img class="my-5" src="/media/bc_short_logo.png" alt="" width="110" height="90">
+                <img class="my-5" src="{{ MEDIA_URL }}bc_logos/bc_short_logo.png" alt="" width="110" height="90">
                 <h2 class="h3 mb-3 font-weight-normal">Please sign in</h2> 
                 {% for field in form %} 
                 {% if field.label == "Password" %}
@@ -27,7 +27,7 @@
                 {% endif %} 
                 {% endfor %} 
                 {% if form.errors %}
-                <p class="bg-danger py-2 my-2 text-white">Your username or password is incorrect.</p>
+                <p class="bg-danger py-2 my-2 text-white rounded">Your username or password is incorrect.</p>
                 {% endif %}
 
                 <button class="btn btn-lg btn-success btn-block my-2" type="submit">Sign in</button>

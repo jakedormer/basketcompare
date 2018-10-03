@@ -35,7 +35,7 @@
 
 <!-- Image -->
 <div class="container text-center">
-    <img src="" class="img-responsive" alt="{{ master_product.product_description }}">
+    <img src="http://www.thecellartrust.org/wp-content/uploads/2016/04/Product-Image-Coming-Soon.png" class="img-responsive" alt="{{ master_product.product_description }}" height=300 width=300>
 </div>
 
 
@@ -51,7 +51,7 @@
             <form class="d-inline">
             {% csrf_token %}
             <input type="hidden" name="bc_sku" value="{{ master_product.bc_sku}}">
-            <input type="number" name="quantity" class="atp-input text-center" value=1>
+            <input type="number" name="quantity" class="atp-input text-center" value=1 min=1>
             <button type="submit" class="ml-0 btn btn-outline-primary fixed-button-atp" name="addtoproject"><i class="fa fa-plus"></i> Add to Project 
             </button>
             </form>
@@ -59,12 +59,17 @@
         <!-- Favourite -->
         <div class="col-lg-4 mb-1 d-flex justify-content-center position-inherit">
             {% if user.is_authenticated %}
+                {% if user_favourites_count < 10 %}
             <form class="form" method="post" action="{% url 'favourites' %}">
                 {% csrf_token %}
                 <input type="hidden" name="bc_sku" value="{{ master_product.bc_sku}}">
                 <button type="submit" name="addtofavourites" class="btn btn-warning fixed-button position-inherit"><i class="fa fa-star"></i> Favourite
                 </button>
             </form>
+                {% else %}
+                <button type="button" class="btn btn-outline-warning fixed-button position-inherit" data-container="body" data-toggle="popover" data-placement="top" data-content="You can only have 10 favourite products. Please go to favourites to remove some."><i class="fa fa-star"></i> Favourite
+                </button>
+                {% endif %}
             {% else %}
             <button type="button" class="btn btn-outline-warning fixed-button position-inherit" data-container="body" data-toggle="popover" data-placement="top" data-content="Please create an account."><i class="fa fa-star"></i> Favourite
             </button>

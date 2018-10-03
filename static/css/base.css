@@ -72,6 +72,10 @@ footer {
 	color: white;
 }
 
+.sub-nav:hover { 
+    background-color: #343a40;
+}
+
 
 /* Extra Bootstraps
 -------------------------------------------------- */
@@ -126,4 +130,15 @@ footer {
 
 .text-gold {
   color:  #FFD700;
+}
+
+.icon-submit {
+  background: none;
+  padding: 0px;
+  border: none;
+  cursor: pointer;
+}
+
+.bg-brown {
+  background-color: #7c492e;
 }

@@ -1,17 +1,20 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from products.models import Product, Category, SubCategory, Profile
+from products.models import Product, Category, SubCategory, Profile, Project, Project_Item
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator
 from django.template import context
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import authenticate, login
-from products.forms import SignUpForm, AddToFavouritesForm
+from products.forms import SignUpForm, CreateProjectForm
 from django.contrib import messages
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth import logout as django_logout
 from django.contrib.auth import login as django_login
 from django.db.models import OuterRef, Subquery, Count, Min
 from django.db.models import DecimalField, IntegerField, ExpressionWrapper
+from django.core.exceptions import ObjectDoesNotExist
+from django.db import IntegrityError
+from django.http import HttpResponse
 
 
 # Create your views here.
@@ -55,13 +58,14 @@ def about(request):
 	return render(request,template,context)
 
 def pdp(request, code=None, slug=None):
+	user = request.user
+	user_favourites_count = user.profile.favourites.count()
 	master_product = Product.objects.get(bc_sku=code, product_slug=slug, product_type="master_product")
 	compared_products = Product.objects.filter(bc_sku=code, product_type="compared_product").order_by('product_price')
-
 	context = {
 		'master_product': master_product,
 		'compared_products': compared_products,
-		'add_to_favourites_form': AddToFavouritesForm,
+		'user_favourites_count': user_favourites_count,
 	}
 	template = 'pdp.html'
 	return render(request, template, context)
@@ -123,7 +127,7 @@ def sign_up(request):
 		form = SignUpForm(request.POST)
 
 		if form.is_valid():
-			new_user = form.save()
+			# new_user = form.save()
 			username = form.cleaned_data['username']
 			password = form.cleaned_data['password1']
 			email = form.cleaned_data['email']
@@ -149,14 +153,19 @@ def favourites(request):
 		profile = Profile.objects.get(user=user)
 
 		if request.method == 'POST':
-			product_code = int(request.POST['bc_sku'])
-			product = Product.objects.get(bc_sku=product_code, product_type="master_product")
 
-			if 'addtofavourites' in request.POST:
+			if 'addtofavourites' in request.POST: #Name of submit button
+				product_code = int(request.POST['bc_sku'])
+				product = Product.objects.get(bc_sku=product_code, product_type="master_product")
 				user.profile.favourites.add(product)
 
 			elif 'removefromfavourites' in request.POST:
-				user.profile.favourites.remove(product)
+				product_code = int(request.POST['bc_sku'])
+				product = Product.objects.get(bc_sku=product_code, product_type="master_product")
+				profile.favourites.remove(product)
+
+			elif 'deleteallfavourites' in request.POST:
+				profile.favourites.all().delete()
 
 			return redirect('registration/favourites')	
 
@@ -183,3 +192,56 @@ def account(request):
 	else:
 		return redirect('/')
 
+def my_projects(request):
+	user = request.user
+	if request.user.is_authenticated:
+		template = "registration/my_projects.html"
+		try:
+			projects = Project.objects.filter(user=user)
+		except ObjectDoesNotExist:
+				projects = None
+		context = {
+			'projects': projects
+		}
+		
+		if request.method == 'POST':
+
+			if 'delete-project' in request.POST:
+				project_name = request.POST['project_name']
+				project = Project.objects.get(user=user, name=project_name)
+				Project.delete(project)
+
+
+		return render(request, template, context)
+
+	else:
+		return redirect('register')
+
+
+
+def create_project(request):
+	user = request.user
+	template = "registration/create_project.html"
+	context = {}
+
+	if request.method == 'POST':
+		if 'create-project' in request.POST:
+			form = CreateProjectForm(request.POST)
+			if form.is_valid():
+				try:
+					project = form.save(commit=False)
+					project.user = request.user
+					project.save()
+					return redirect('my-projects')
+				except IntegrityError:
+					e = "You can't have two projects with the same name"
+					form.add_error(None, e)
+					return render(request, template, context={"form": form})
+	else:
+		form = CreateProjectForm()
+
+	context = {
+	'form': form
+	}
+					
+	return render(request, template, context)

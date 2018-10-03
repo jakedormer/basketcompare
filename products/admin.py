@@ -41,6 +41,17 @@ class ProductAdmin(ImportExportModelAdmin):
 admin.site.unregister(Product)
 admin.site.register(Product, ProductAdmin)
 
+
+class CategoryResource(resources.ModelResource):
+	class Meta:
+		model = Category
+
+class CategoryAdmin(ImportExportModelAdmin):
+	resource_class = CategoryResource
+
+admin.site.unregister(Category)
+admin.site.register(Category, CategoryAdmin)
+
 class profileAdmin(admin.ModelAdmin):
 	class Meta:
 		model = Profile

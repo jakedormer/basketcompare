@@ -5,6 +5,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.urls import reverse
 
+
 class Category(models.Model):
 	category_name 					= models.CharField(primary_key=True, max_length=120, null=False, blank=True, unique=True)
 	category_slug 					= models.SlugField(unique=True, null=True, blank=True)
@@ -121,6 +122,29 @@ class Profile(models.Model):
 	@receiver(post_save, sender=User)
 	def save_user_profile(sender, instance, **kwargs):
 		instance.profile.save()
+
+class Project_Item(models.Model):
+	item = models.ManyToManyField(Product, blank=True)
+	quantity = models.PositiveIntegerField()
+
+class Project(models.Model):
+	name = models.CharField(null=False, blank=False, max_length=50)
+	items = models.ManyToManyField(Project_Item, blank=True)
+	user = models.ForeignKey(User, on_delete=models.CASCADE, to_field="username", null=False)
+	merchants = models.ManyToManyField(Merchant, blank=False)
+
+	class Meta:
+		unique_together = ('name', 'user')
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -56,3 +56,5 @@ If making a change to a static file.
 <!-- {% static "" as base_url %} -->
 
 <!-- <td class="merchant-logo"><img class="d-block mx-auto mb-1 shadow-sm" src="{{ base_url }}media/merchant_logos/{{ item.merchant}}.png" height=70 width=70> -->
+
+python manage.py createsuperuser

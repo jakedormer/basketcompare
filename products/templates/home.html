@@ -16,7 +16,7 @@
     <div class="container h-100 text-center">
         {% if messages %} {% for message in messages %}
         <h1 class="d-block display-4 home-title h-100">{{ message }}</h1> {% endfor %} {% else %}
-        <h1 class="d-block display-4 home-title h-100">The UK Comparison Site For Building Materials & Trade Products</h1> 
+        <h1 class="d-block display-4 home-title h-100">The Comparison Site For Building Materials</h1> 
         {% endif %}
     </div>
 </div>
@@ -46,7 +46,7 @@
 </div>
 
 <!-- 3 Member Features -->
-<div class="container marketing">
+<div class="container marketing mb-4">
     <h2 class="text-center display-4 my-3">Want more?</br><small class="text-muted"> Sign Up For a FREE Account</small></h2>
 
     <!-- Three columns of text below the carousel -->
@@ -71,10 +71,13 @@
         <!-- /.col-lg-4 -->
     </div>
     <!-- /.row -->
+    {% if user.is_authenticated %}
+    {% else %}
     <div class="text-center">
-        <a href="/register/" class="btn btn-success my-5 btn-lg w-50 shadow">Sign Up</a>
+        <a href="/register" class="btn btn-success my-5 btn-lg w-50 shadow">Sign Up</a>
     </div>
-
+    {% endif %}
+    </div>
     <!--Popular Categories -->
         <div class="container">
             <h2>Popular Categories</h2>
