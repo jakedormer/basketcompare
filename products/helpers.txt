@@ -18,9 +18,9 @@ jake.profile.favourites.all()
 
 //Git
 
-git.status
-git.add       file.name
-git.commit
+git status
+git add .       file.name
+git commit
 git push origin master
 
 *Check for all remote repositories
@@ -58,3 +58,5 @@ If making a change to a static file.
 <!-- <td class="merchant-logo"><img class="d-block mx-auto mb-1 shadow-sm" src="{{ base_url }}media/merchant_logos/{{ item.merchant}}.png" height=70 width=70> -->
 
 python manage.py createsuperuser
+
+When you need to install dependencies from a pipfile, use "pipenv install"

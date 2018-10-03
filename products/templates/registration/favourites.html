@@ -21,14 +21,14 @@
         </div>
         <div class="col-md-9 card mt-3">
         <div class="table-responsive mt-3">
-        {% if favourites %} 
+        {% if favourites %}
         <table id="comparison-table" class="table">
             <thead>
                 <tr>
                     <th class="row-number"></th>
                     <th class="product-image"></th>
                     <th class="description">Description</th>
-                    <th class="best-price text-center">Best Price</th>
+                    <th class="min-price text-center">Best Price</th>
                     <th class="remove"></th>
                 </tr>
             </thead>
@@ -54,6 +54,9 @@
             {% csrf_token %}
                 <button type="submit" name="deleteallfavourites" class="btn btn-danger mb-4 mr-3"><i class="fas fa-trash-alt"></i> Delete All</button>
             </form>
+    </div>
+    <div class="text-center my-2">
+        <p class="text-center">You currently have {{ favourites.count }} out of a possible 10 products in your favourites</p>
     </div>
         {% else %} 
         <div class="text-center">

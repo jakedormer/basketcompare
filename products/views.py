@@ -59,15 +59,26 @@ def about(request):
 
 def pdp(request, code=None, slug=None):
 	user = request.user
-	user_favourites_count = user.profile.favourites.count()
 	master_product = Product.objects.get(bc_sku=code, product_slug=slug, product_type="master_product")
 	compared_products = Product.objects.filter(bc_sku=code, product_type="compared_product").order_by('product_price')
 	context = {
 		'master_product': master_product,
 		'compared_products': compared_products,
-		'user_favourites_count': user_favourites_count,
 	}
 	template = 'pdp.html'
+	if user.is_authenticated:
+		user_favourites_count = user.profile.favourites.count()
+		context.update({
+			'user_favourites_count': user_favourites_count,
+		})
+		try:
+			projects = Project.objects.filter(user=user)
+		except ObjectDoesNotExist:
+				projects = None
+		context.update({
+			'projects': projects
+		})
+
 	return render(request, template, context)
 
 def plp(request, subcategory_slug):
@@ -172,7 +183,6 @@ def favourites(request):
 		else:
 			subquery = Product.objects.filter(bc_sku=OuterRef('bc_sku')).values('bc_sku').annotate(min_price=Min('product_price'))
 			favourites = user.profile.favourites.all().annotate(min_price=ExpressionWrapper(Subquery(subquery.values('min_price')), output_field=DecimalField(decimal_places=2, max_digits=10))).order_by('product_description')
-
 			context = {
 				'favourites': favourites
 				}
