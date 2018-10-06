@@ -142,3 +142,8 @@ footer {
 .bg-brown {
   background-color: #7c492e;
 }
+
+.no-bullets{
+list-style-type:none;
+margin-left: -1.25rem;
+}

@@ -37,7 +37,8 @@ urlpatterns = [
     url(r'^password-reset/done$', PasswordResetDoneView.as_view(template_name='registration/password_reset_done.html'), name='password_reset_done'),
     url(r'^reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$', PasswordResetConfirmView.as_view(template_name="registration/password_reset_confirm.html"), name='password_reset_confirm'),
     url(r'^reset/done/$', PasswordResetDoneView.as_view(template_name="registration/password_reset_complete.html"), name='password_reset_complete'),
-    url(r'create-project/$', products.views.create_project, name="create_project"),
+    url(r'^create-project/$', products.views.create_project, name="create_project"),
+    url(r'^project/(?P<project_slug>[-\w]+)/$', products.views.project, name="project"),
     ]
 
 urlpatterns += static(base.STATIC_URL, document_root=base.STATIC_ROOT)

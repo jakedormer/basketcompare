@@ -55,7 +55,8 @@ class Merchant(models.Model):
 	merchant = models.CharField(primary_key=True, null=False, blank=True, choices=merchant_choices, max_length=50, unique=True)
 
 	def __str__(self):
-		return self.merchant
+		return self.get_merchant_display()
+
 
 
 class Product(models.Model):
@@ -131,7 +132,12 @@ class Project(models.Model):
 	name = models.CharField(null=False, blank=False, max_length=50)
 	items = models.ManyToManyField(Project_Item, blank=True)
 	user = models.ForeignKey(User, on_delete=models.CASCADE, to_field="username", null=False)
-	merchants = models.ManyToManyField(Merchant, blank=False)
+	merchants = models.ManyToManyField(Merchant, null=False)
+	project_slug = models.SlugField(null=True, blank=True)
+	
+	def save(self, *args, **kwargs):
+		self.project_slug = slugify(self.name)
+		super(Project, self).save(*args, **kwargs)
 
 	class Meta:
 		unique_together = ('name', 'user')

@@ -241,7 +241,7 @@ def create_project(request):
 				try:
 					project = form.save(commit=False)
 					project.user = request.user
-					project.save()
+					form.save()
 					return redirect('my-projects')
 				except IntegrityError:
 					e = "You can't have two projects with the same name"
@@ -255,3 +255,17 @@ def create_project(request):
 	}
 					
 	return render(request, template, context)
+
+def project(request, project_slug):
+	user = request.user
+	if request.user.is_authenticated:
+		template = "registration/project.html"
+		project = Project.objects.get(user=user, project_slug=project_slug)
+		context = {
+			'project': project
+		}
+
+		return render(request, template, context)
+
+	else:
+		return redirect('register')
