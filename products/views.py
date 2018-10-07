@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from products.models import Product, Category, SubCategory, Profile, Project, Project_Item
+from products.models import *
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator
 from django.template import context
@@ -220,6 +220,18 @@ def my_projects(request):
 				project_name = request.POST['project_name']
 				project = Project.objects.get(user=user, name=project_name)
 				Project.delete(project)
+
+			if 'add-to-project' in request.POST:
+				bc_sku = int(request.POST['bc_sku'])
+				project_name = request.POST['project_name']
+				quantity = request.POST['quantity']
+
+				project = Project.objects.get(user=user, name=project_name)
+				item = Product.objects.get(bc_sku=bc_sku, product_type="master_product")
+
+				project_item = Project_Item.objects.create(project=project, item=item, quantity=quantity)
+				
+				
 
 
 		return render(request, template, context)
