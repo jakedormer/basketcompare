@@ -221,17 +221,17 @@ def my_projects(request):
 				project = Project.objects.get(user=user, name=project_name)
 				Project.delete(project)
 
-			if 'add-to-project' in request.POST:
-				bc_sku = int(request.POST['bc_sku'])
-				project_name = request.POST['project_name']
-				quantity = request.POST['quantity']
+			if 'create-project-item' in request.POST:
+				form_bc_sku = int(request.POST['bc_sku'])
+				form_project_slug = request.POST['project_slug']
+				form_project_quantity = int(request.POST['project_quantity'])
 
-				project = Project.objects.get(user=user, name=project_name)
-				item = Product.objects.get(bc_sku=bc_sku, product_type="master_product")
+				project= Project.objects.get(user=user, project_slug=form_project_slug)
+				master_item = Product.objects.get(bc_sku=form_bc_sku, product_type="master_product")
 
-				project_item = Project_Item.objects.create(project=project, item=item, quantity=quantity)
+
 				
-				
+
 
 
 		return render(request, template, context)
@@ -273,8 +273,10 @@ def project(request, project_slug):
 	if request.user.is_authenticated:
 		template = "registration/project.html"
 		project = Project.objects.get(user=user, project_slug=project_slug)
+		project_items = project.project_items.all()
 		context = {
-			'project': project
+			'project': project,
+			'project_items': project_items,
 		}
 
 		return render(request, template, context)

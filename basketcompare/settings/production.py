@@ -25,3 +25,5 @@ SERVER_EMAIL = 'django@hidden-sands-73111.herokuapp.com'
 
 MEDIA_URL = 'https://s3.eu-west-2.amazonaws.com/basketcompare-core/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "staticfiles", "media")
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

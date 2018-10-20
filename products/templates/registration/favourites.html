@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
+{% load mathfilters %}
 
 {% block meta_content %}
     <title>My Favourites | Basket Compare | UK</title>
@@ -7,6 +8,7 @@
 {% endblock %}
 
 {% block css_content %}
+<link rel="stylesheet" href='{% static "css/favourites.css" %}'> 
 {% endblock %}
 {% block body_content %}
 
@@ -28,7 +30,8 @@
                     <th class="row-number"></th>
                     <th class="product-image"></th>
                     <th class="description">Description</th>
-                    <th class="min-price text-center">Best Price</th>
+                    <th class="incVat min-price text-center">Best Price</th>
+                    <th class="exVat min-price text-center">Best Price</th>
                     <th class="remove"></th>
                 </tr>
             </thead>
@@ -38,9 +41,10 @@
                     <td class="row-number">{{ forloop.counter }}</td>
                     <td class="product-image"><img src="/media/blue-circle.jpg" height=70 width=70></td>
                     <td class="description"><a href="/{{product.product_slug}}/p/{{product.bc_sku}}">{{ product.product_description }}</a></td>
-                    <td class="min-price text-success text-center font-weight-bold fs-13">£{{ product.min_price }}</td>
+                    <td class="min-price incVat text-success text-center font-weight-bold fs-13">£{{ product.min_price }}</td>
+                    <td class="min-price exVat text-success text-center font-weight-bold fs-13">£{{ product.min_price|div:1.2|floatformat:2 }}</td>
                     <td class="rubbish">
-                        <form class="form" method="post" action="{% url 'favourites' %}" onsubmit="return confirm('Are you sure you want to delete this?');">
+                        <form class="form" method="post" action="{% url 'favourites' %}" onsubmit="return confirm('Are you sure you want to delete this item from your favourites?');">
                             {% csrf_token %}
                             <input type="hidden" name="bc_sku" value="{{ product.bc_sku}}">
                             <button type="submit" name="removefromfavourites" class="icon-submit"><i class="fas fa-trash-alt"></i></button>
@@ -54,9 +58,9 @@
         <div class="mb-5 d-flex justify-content-center">
             <button type="button" class="btn btn-outline-danger d-flex justify-content-center fixed-button" id="vat-button" onclick="myFunction()">inc Vat</button>
         </div>
-        <form class="form text-center d-flex justify-content-center" method="post" action="{% url 'favourites' %}" onsubmit="return confirm('Are you sure you want to delete this?');">
+        <form class="form text-center d-flex justify-content-center" method="post" action="{% url 'favourites' %}" onsubmit="return confirm('Are you sure you want to delete ALL items from your favourites?');">
             {% csrf_token %}
-                <button type="submit" name="deleteallfavourites" class="btn btn-danger mb-4 mr-3"><i class="fas fa-trash-alt"></i> Delete All</button>
+                <button type="submit" name="deleteallfavourites" class="btn btn-dark mb-4 mr-3"><i class="fas fa-trash-alt"></i> Delete All</button>
             </form>
     </div>
     <div class="text-center my-2">

@@ -124,11 +124,19 @@ class Profile(models.Model):
 	def save_user_profile(sender, instance, **kwargs):
 		instance.profile.save()
 
+class Project_Item(models.Model):
+	name = models.CharField(null=False, blank=False, max_length=200)
+	item = models.ManyToManyField(Product)
+	quantity = models.PositiveIntegerField
+
+
+
 class Project(models.Model):
 	name = models.CharField(null=False, blank=False, max_length=50)
 	user = models.ForeignKey(User, on_delete=models.CASCADE, to_field="username", null=False)
-	merchants = models.ManyToManyField(Merchant, null=False)
+	merchants = models.ManyToManyField(Merchant)
 	project_slug = models.SlugField(null=True, blank=True)
+	project_items = models.ManyToManyField(Project_Item)
 	
 	def save(self, *args, **kwargs):
 		self.project_slug = slugify(self.name)
@@ -137,10 +145,7 @@ class Project(models.Model):
 	class Meta:
 		unique_together = ('name', 'user')
 
-class Project_Item(models.Model):
-	item = models.ManyToManyField(Product, blank=True)
-	quantity = models.PositiveIntegerField
-	project = models.ManyToManyField(Project, null=False)
+
 
 
 

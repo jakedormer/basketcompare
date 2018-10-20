@@ -36,7 +36,7 @@
                                     <th class="row-number"></th>
                                     <th class="project-icon w-10"></th>
                                     <th class="project-name w-50">Name</th>
-                                    <th class="merchants-compared">Merchants Compared</th>
+                                    <th class="merchants-compared">Merchants</th>
                                     <th class="project-items w-25">Items</th>
                                     <th class="project-delete"></th>
                                 </tr>
@@ -48,7 +48,7 @@
                                     <td class="project-icon"><i class="fas fa-th-list fa-3x text-secondary"></i></td>
                                     <td class="project-name"><a href="/project/{{project.project_slug}}/">{{project.name|title}}</a></td>
                                     <td class="merchants-compared text-center">{{ project.merchants.all.count }}</td>
-                                    <td class="project-items text-secondary">5 items</td>
+                                    <td class="project-items text-secondary">{{ project.project_items.count }}</td>
                                     <td class="project-delete">
                                         <form class="form" method="post" action="{% url 'my-projects' %}" onsubmit="return confirm('Are you sure you want to delete this?');">
                                             {% csrf_token %}

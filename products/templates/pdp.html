@@ -45,67 +45,58 @@
 
 <!-- Buttons -->
 <div class="container">
-    <div class="row mb-2">
+
+    <div class="row mb-2 text-center">
+
         <!-- Add to Project List -->
-        <div class="col-lg-4 mb-1 d-flex justify-content-center position-inherit">
-            {% if user.is_authenticated %}
-                {% if projects %}
-            <form class="d-inline" action="" action="{% url 'my-projects' %}">
-            {% csrf_token %}
-            <input type="hidden" name="bc_sku" value="{{ master_product.bc_sku}}">
-            <input type="number" name="quantity" class="atp-input text-center" value=1 min=1>
-            
-            <div class="dropdown d-inline">
-                <button class="btn btn-primary fixed-button-atp dropdown-toggle" type="button" id="dropdownMenuButton"> Add to Project <i class="fas fa-angle-down"></i>
-                </button>
+        <div class="col-lg-4 my-1">
+            {% if user.is_authenticated %} {% if projects %}
+            <form class="formx" method="post" action="{% url 'my-projects' %}">
+                {% csrf_token %}
+                <input type="hidden" name="bc_sku" value="{{ master_product.bc_sku}}">
+                <input type="number" name="project_quantity" class="atp-input text-center" value=1 min=1>
+                <div class="dropdown d-inline">
+                    <button class="btn btn-primary fixed-button-atp dropdown-toggle" type="button" id="dropdownMenuButton"> Add to Project <i class="fas fa-angle-down"></i></button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    {% for project in projects %}
-                        <label class="ml-2"><input class = "ml-2" type="radio" name="project_name" value="{{ project.name }}"> {{ project.name|title }}</label>
-                    {% endfor %}
+                        {% for project in projects %}
+                        <div class="form-check dropdown-item">
+                            <input class="form-check-input" type="radio" name="project_name" value="{{project.project_slug}}">
+                            <label class="form-check-label"> {{project.name|title}}</label>
+                        </div>
+                        {% endfor %}
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item bg-primary text-white" href="/my-projects">Add To Project</a>
+                        <button type="submit" name="create-project-item" class="dropdown-item text-primary font-weight-bold">Add To Project</button>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item text-success" href="/my-projects">New Project</a>
                     </div>
-            </div>
-                {% else %}
-                <input type="number" name="quantity" class="mr-1 atp-input text-center" value=1 min=1>z
-                <button type="button" class="ml-0 btn btn-outline-primary fixed-button-atp" name="addtoproject" data-container="body" data-toggle="popover" data-placement="top" data-content="You must create a project first. Please click <a href='/my-projects'>here.</a>" data-html="true" <i class="fa fa-star"></i> Add to Project
-                </button>
-                {% endif %}
-            {% else %}
-            <input type="number" name="quantity" class="mr-1 atp-input text-center" value=1 min=1>
-            <button type="button" class="ml-0 btn btn-outline-primary fixed-button-atp" name="addtoproject" data-container="body" data-toggle="popover" data-placement="top" data-content="Please create an account."><i class="fa fa-star ml-2"></i> Add to Project  
-            </button>
-            {% endif %}
-
+                </div>
             </form>
+            {% endif %} {% endif %}
         </div>
-
-        <!-- Favourite -->
-        <div class="col-lg-4 mb-1 d-flex justify-content-center position-inherit">
-            {% if user.is_authenticated %}
-                {% if user_favourites_count < 10 %}
-            <form class="form" method="post" action="{% url 'favourites' %}">
+  
+        
+        <!-- Favourites -->
+        <div class="col-lg-4 my-1">
+            {% if user.is_authenticated %} {% if user_favourites_count < 10 %} 
+                <form class="form" method="post" action="{% url 'favourites' %}">
                 {% csrf_token %}
                 <input type="hidden" name="bc_sku" value="{{ master_product.bc_sku}}">
-                <button type="submit" name="addtofavourites" class="btn btn-warning fixed-button position-inherit"><i class="fa fa-star"></i> Favourite
+                <button type="submit" name="addtofavourites" class="btn btn-warning fixed-button"><i class="fa fa-star"></i> Favourite
                 </button>
-            </form>
+                </form>
                 {% else %}
-                <button type="button" class="btn btn-outline-warning fixed-button position-inherit" data-container="body" data-toggle="popover" data-placement="top" data-content="You can only have 10 favourite products. Please go to favourites to remove some."><i class="fa fa-star"></i> Favourite
+                <button type="button" class="btn btn-outline-warning" data-container="body" data-toggle="popover" data-placement="top" data-content="You can only have 10 favourite products. Please go to favourites to remove some."><i class="fa fa-star"></i> Favourite
+                </button>
+                {% endif %} {% else %}
+                <button type="button" class="btn btn-outline-warning" data-container="body" data-toggle="popover" data-placement="top" data-content="Please create an account."><i class="fa fa-star"></i> Favourite
                 </button>
                 {% endif %}
-            {% else %}
-            <button type="button" class="btn btn-outline-warning fixed-button position-inherit" data-container="body" data-toggle="popover" data-placement="top" data-content="Please create an account."><i class="fa fa-star"></i> Favourite
-            </button>
-            {% endif %}
-        </div>
+        </div>    
 
         <!-- VAT-->
-        <div class="col-lg-4 mb-1 d-flex justify-content-center position-inherit">
-            <button type="button" class="btn btn-outline-danger d-flex justify-content-center fixed-button" id="vat-button" onclick="myFunction()">inc Vat</button>
-        </div>
+        <div class="col-lg-4 my-1">
+            <button type="button" class="btn btn-outline-danger justify-content-center fixed-button" id="vat-button" onclick="myFunction()">inc Vat</button>
+        </div>       
     </div>
 </div>
 
