@@ -59,8 +59,8 @@
                     <button class="btn btn-primary fixed-button-atp dropdown-toggle" type="button" id="dropdownMenuButton"> Add to Project <i class="fas fa-angle-down"></i></button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         {% for project in projects %}
-                        <div class="form-check dropdown-item">
-                            <input class="form-check-input" type="radio" name="project_name" value="{{project.project_slug}}">
+                        <div class="ml-2 form-check dropdown-item">
+                            <input class="form-check-input" type="radio" name="project_slug" value="{{project.project_slug}}">
                             <label class="form-check-label"> {{project.name|title}}</label>
                         </div>
                         {% endfor %}

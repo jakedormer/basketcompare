@@ -223,11 +223,14 @@ def my_projects(request):
 
 			if 'create-project-item' in request.POST:
 				form_bc_sku = int(request.POST['bc_sku'])
-				form_project_slug = request.POST['project_slug']
+				form_project_slug = request.POST.get('project_slug')
 				form_project_quantity = int(request.POST['project_quantity'])
 
 				project= Project.objects.get(user=user, project_slug=form_project_slug)
 				master_item = Product.objects.get(bc_sku=form_bc_sku, product_type="master_product")
+
+				p = Project_Item.objects.create(quantity=int(form_project_quantity), project=project, item=master_item)
+
 
 
 				
