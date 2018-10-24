@@ -131,6 +131,7 @@ class Project(models.Model):
 	merchants = models.ManyToManyField(Merchant)
 	project_slug = models.SlugField(null=True, blank=True)
 
+
 	
 	def save(self, *args, **kwargs):
 		self.project_slug = slugify(self.name)
@@ -140,9 +141,12 @@ class Project(models.Model):
 		unique_together = ('name', 'user')
 
 class Project_Item(models.Model):
-	item = models.OneToOneField(Product, on_delete=models.CASCADE)
+	item = models.ManyToManyField(Product)
 	quantity = models.IntegerField(null=False, blank=False)
 	project = models.ForeignKey(Project, on_delete=models.CASCADE)
+
+	# class Meta:
+	# 	unique_together = ('item', 'project')
 
 
 

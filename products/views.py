@@ -222,18 +222,18 @@ def my_projects(request):
 				Project.delete(project)
 
 			if 'create-project-item' in request.POST:
-				form_bc_sku = int(request.POST['bc_sku'])
+				product_code = request.POST['bc_sku']
 				form_project_slug = request.POST.get('project_slug')
 				form_project_quantity = int(request.POST['project_quantity'])
 
 				project= Project.objects.get(user=user, project_slug=form_project_slug)
-				master_item = Product.objects.get(bc_sku=form_bc_sku, product_type="master_product")
-
-				p = Project_Item.objects.create(quantity=int(form_project_quantity), project=project, item=master_item)
+				master_item = Product.objects.get(bc_sku=product_code, product_type="master_product")
 
 
+				p = Project_Item.objects.create(quantity=form_project_quantity, project=project)
+				p.item.add(master_item)
 
-				
+
 
 
 
@@ -276,7 +276,7 @@ def project(request, project_slug):
 	if request.user.is_authenticated:
 		template = "registration/project.html"
 		project = Project.objects.get(user=user, project_slug=project_slug)
-		project_items = project.project_items.all()
+		project_items = project.project_item_set.all()
 		context = {
 			'project': project,
 			'project_items': project_items,

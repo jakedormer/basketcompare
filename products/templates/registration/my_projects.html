@@ -45,7 +45,7 @@
                             {% for project in projects %}
                                 <tr>
                                     <td class="row-number">{{ forloop.counter }}</td>
-                                    <td class="project-icon"><i class="fas fa-th-list fa-3x text-secondary"></i></td>
+                                    <td class="project-icon"><i class="fas fa-th-list fa-3x text-primary"></i></td>
                                     <td class="project-name"><a href="/project/{{project.project_slug}}/">{{project.name|title}}</a></td>
                                     <td class="merchants-compared text-center">{{ project.merchants.all.count }}</td>
                                     <td class="project-items text-secondary">{{ project.project_items.count }}</td>
