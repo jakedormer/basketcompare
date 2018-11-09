@@ -27,3 +27,7 @@ DEFAULT_FROM_EMAIL = 'testing@example.com'
 
 MEDIA_URL = '/static/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "staticfiles", "media")
+
+# make all loggers use the console.
+
+

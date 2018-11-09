@@ -27,23 +27,31 @@
                         <div class="col-md-12">
                             <!-- Insert Title of Page Here -->
                             <h4>{{ project.name|title }} </h4>
+                            <!--  -->
                             <hr>
                             <h1>{{ master_item.product_description }}</h1>
-                            {{project.merchants.all.count}}
-                            {{project_items.count}}
-                            {% for a in project_items %}
-                            <p>Item {{ forloop.counter }}</p>
-
-                            {% with a.item.all|first as b %}
-
-                            <p>Name = {{b.product_description }}</p>
-
-                            {% endwith %}
-                            <p>Quantity = {{ a.quantity }}</p>
-                            <p>Project = {{ a.project.name }}</p>
-                            <hr>
-                            {% endfor %}
-                            <!--  -->
+                            <h2>Merchant Count : {{project.merchants.all.count}}</h2>
+                            <h3>Items Count: {{project_items.count}}</h3>
+                            <p>{{ row }}</p>
+                            <div class="table-responsive">
+                                <table id="project-table" class="table tablesorter">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            {% for data in row %}
+                                            <th>{{ data.merchant_id }}</th>
+                                            {% endfor %}
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>hi</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            
                         </div>
                     </div>
                     <div class="row justify-content-center">

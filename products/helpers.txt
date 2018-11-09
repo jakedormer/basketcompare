@@ -60,3 +60,14 @@ If making a change to a static file.
 python manage.py createsuperuser
 
 When you need to install dependencies from a pipfile, use "pipenv install"
+
+
+For when you want to use the shell
+
+python manaage.py shell
+
+from products.models import *
+from django.db import connection
+
+user = User.objects.get(username="jake")
+

@@ -15,6 +15,7 @@ from django.db.models import DecimalField, IntegerField, ExpressionWrapper
 from django.core.exceptions import ObjectDoesNotExist
 from django.db import IntegrityError
 from django.http import HttpResponse
+from django.db import connection
 
 
 # Create your views here.
@@ -277,12 +278,43 @@ def project(request, project_slug):
 		template = "registration/project.html"
 		project = Project.objects.get(user=user, project_slug=project_slug)
 		project_items = project.project_item_set.all()
+		# for p in project_items:
+		# 	q = p.values('bc_sku')
+		# 	bc_sku_list.append(q)
+
+
+
 		context = {
 			'project': project,
 			'project_items': project_items,
 		}
 
+
+		def my_custom_sql():
+		    with connection.cursor() as cursor:
+		        cursor.execute(
+		        	"SELECT * FROM products_product WHERE bc_sku IN ( SELECT DISTINCT bc_sku FROM products_project a INNER JOIN products_project_item b ON a.id = b.project_id INNER JOIN products_project_item_item c ON b.id = c.project_item_id INNER JOIN products_product d ON d.id = c.product_id WHERE project_slug = 'jakes-lawn' and user_id = 'jake') AND ( merchant_id IN (SELECT DISTINCT merchant_id FROM products_project a INNER JOIN products_project_item b ON a.id = b.project_id INNER JOIN products_project_merchants c on a.id = c.project_id WHERE project_slug = 'jakes-lawn' and user_id = 'jake') OR merchant_id = 'basket compare' ) ORDER BY bc_sku, product_type DESC"
+		        	)
+		        row = cursor.fetchall()
+		        context.update({
+		        	'row': row
+		        })
+
+		    return row
+
+		my_custom_sql()
+
+
 		return render(request, template, context)
 
 	else:
 		return redirect('register')
+
+
+
+
+# with connection.cursor() as cursor:
+#     cursor.execute(
+#     	"Select * from products_project_item"
+#     	)
+#     dictfetchall(cursor)
