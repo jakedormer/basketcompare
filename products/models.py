@@ -55,7 +55,8 @@ class Merchant(models.Model):
 	merchant = models.CharField(primary_key=True, null=False, blank=True, choices=merchant_choices, max_length=50, unique=True)
 
 	def __str__(self):
-		return self.get_merchant_display()
+		# return self.get_merchant_display()
+		return self.merchant
 
 
 

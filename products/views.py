@@ -49,9 +49,9 @@ def login(request):
 	return render(request, template, context)
 
 def logout(request):
-    django_logout(request)
-    messages.success(request, "You are now logged out. See you again soon!")
-    return redirect('/')
+	django_logout(request)
+	messages.success(request, "You are now logged out. See you again soon!")
+	return redirect('/')
 
 def about(request):
 	context = locals()
@@ -274,6 +274,8 @@ def create_project(request):
 
 def project(request, project_slug):
 	user = request.user
+	str_project_slug = str(project_slug)
+	user_string = str(user.username)
 	if request.user.is_authenticated:
 		template = "registration/project.html"
 		project = Project.objects.get(user=user, project_slug=project_slug)
@@ -291,16 +293,15 @@ def project(request, project_slug):
 
 
 		def my_custom_sql():
-		    with connection.cursor() as cursor:
-		        cursor.execute(
-		        	"SELECT * FROM products_product WHERE bc_sku IN ( SELECT DISTINCT bc_sku FROM products_project a INNER JOIN products_project_item b ON a.id = b.project_id INNER JOIN products_project_item_item c ON b.id = c.project_item_id INNER JOIN products_product d ON d.id = c.product_id WHERE project_slug = 'jakes-lawn' and user_id = 'jake') AND ( merchant_id IN (SELECT DISTINCT merchant_id FROM products_project a INNER JOIN products_project_item b ON a.id = b.project_id INNER JOIN products_project_merchants c on a.id = c.project_id WHERE project_slug = 'jakes-lawn' and user_id = 'jake') OR merchant_id = 'basket compare' ) ORDER BY bc_sku, product_type DESC"
-		        	)
-		        row = cursor.fetchall()
-		        context.update({
-		        	'row': row
-		        })
+			with connection.cursor() as cursor:
+				SQL = "SELECT DISTINCT t1.bc_sku, t1.product_description, quantity, merchant_id, Min(product_price), product_price * quantity AS sub_total FROM (SELECT * FROM products_product) t1 INNER JOIN (SELECT DISTINCT bc_sku, quantity FROM products_project a INNER JOIN products_project_item b ON a.id = b.project_id INNER JOIN products_project_item_item c ON b.id = c.project_item_id INNER JOIN products_product d ON d.id = c.product_id WHERE project_slug = %s AND user_id = %s) t2 ON t1.bc_sku = t2.bc_sku WHERE merchant_id = 'basket compare' OR merchant_id IN (SELECT DISTINCT merchant_id FROM products_project a INNER JOIN products_project_item b ON a.id = b.project_id INNER JOIN products_project_merchants c ON a.id = c.project_id WHERE project_slug = %s AND user_id = %s) GROUP BY merchant_id, t1.bc_sku ORDER BY t1.bc_sku, product_price "
+				cursor.execute(SQL, [project_slug, user_string, project_slug, user_string])
+				row = cursor.fetchall()
+				context.update({
+					'row': row
+				})
 
-		    return row
+			return row
 
 		my_custom_sql()
 
