@@ -6,7 +6,8 @@ bin/
 Include/
 pip-selfcheck.json
 Lib/
-media/
+static/media/
+staticfiles/media
 development.py
 
 # C extensions
