@@ -16,6 +16,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.db import IntegrityError
 from django.http import HttpResponse
 from django.db import connection
+from collections import namedtuple
 
 
 # Create your views here.
@@ -279,7 +280,7 @@ def project(request, project_slug):
 	if request.user.is_authenticated:
 		template = "registration/project.html"
 		project = Project.objects.get(user=user, project_slug=project_slug)
-		project_items = project.project_item_set.all()
+		merchants = project.merchants.all()
 		# for p in project_items:
 		# 	q = p.values('bc_sku')
 		# 	bc_sku_list.append(q)
@@ -288,14 +289,15 @@ def project(request, project_slug):
 
 		context = {
 			'project': project,
-			'project_items': project_items,
+			'headers': merchants
 		}
 
+		SQL = "SELECT t4.product_description, CAST(t3.quantity AS VARCHAR) AS quantity, t3.merchant, t3.product_price, t3.sub_total FROM (SELECT DISTINCT t1.bc_sku, Sum(t2.quantity) AS Quantity, t1.merchant_id AS Merchant, Min(product_price) AS Product_Price, Min(product_price) * Sum(t2.quantity) AS Sub_Total FROM (SELECT * FROM products_product) t1 INNER JOIN (SELECT DISTINCT bc_sku, quantity FROM products_project a INNER JOIN products_project_item b ON a.id = b.project_id INNER JOIN products_project_item_item c ON b.id = c.project_item_id INNER JOIN products_product d ON d.id = c.product_id WHERE project_slug = 'hi' AND user_id = 'jake') t2 ON t1.bc_sku = t2.bc_sku WHERE merchant_id = 'basket compare' OR merchant_id IN (SELECT DISTINCT merchant_id FROM products_project a INNER JOIN products_project_item b ON a.id = b.project_id INNER JOIN products_project_merchants c ON a.id = c.project_id WHERE project_slug = 'hi' AND user_id = 'jake') GROUP BY merchant_id, t1.bc_sku) t3 INNER JOIN (SELECT product_description, bc_sku FROM products_product WHERE product_type = 'master_product') t4 ON t3.bc_sku = t4.bc_sku WHERE t3.merchant <> 'basket compare' ORDER BY t4.product_description, t3.merchant "
 
-		def my_custom_sql():
+
+		def my_custom_sql(sql):
 			with connection.cursor() as cursor:
-				SQL = "SELECT DISTINCT t1.bc_sku, t1.product_description, quantity, merchant_id, Min(product_price), product_price * quantity AS sub_total FROM (SELECT * FROM products_product) t1 INNER JOIN (SELECT DISTINCT bc_sku, quantity FROM products_project a INNER JOIN products_project_item b ON a.id = b.project_id INNER JOIN products_project_item_item c ON b.id = c.project_item_id INNER JOIN products_product d ON d.id = c.product_id WHERE project_slug = %s AND user_id = %s) t2 ON t1.bc_sku = t2.bc_sku WHERE merchant_id = 'basket compare' OR merchant_id IN (SELECT DISTINCT merchant_id FROM products_project a INNER JOIN products_project_item b ON a.id = b.project_id INNER JOIN products_project_merchants c ON a.id = c.project_id WHERE project_slug = %s AND user_id = %s) GROUP BY merchant_id, t1.bc_sku ORDER BY t1.bc_sku, product_price "
-				cursor.execute(SQL, [project_slug, user_string, project_slug, user_string])
+				query = cursor.execute(sql, [project_slug, user_string, project_slug, user_string])
 				row = cursor.fetchall()
 				context.update({
 					'row': row
@@ -303,7 +305,22 @@ def project(request, project_slug):
 
 			return row
 
-		my_custom_sql()
+		def namedtuplefetchall(sql):
+		    "Return all rows from a cursor as a namedtuple"
+		    with connection.cursor() as cursor:
+		    	query = cursor.execute(sql, [project_slug, user_string, project_slug, user_string])
+		    	desc = cursor.description
+		    	nt_result = namedtuple('Result', [col[0] for col in desc])
+		    	data = [nt_result(*row) for row in cursor.fetchall()]
+		    	context.update({
+		    		'rows': data,
+		    	})
+
+		    return data
+
+
+		my_custom_sql(SQL)
+		namedtuplefetchall(SQL)
 
 
 		return render(request, template, context)

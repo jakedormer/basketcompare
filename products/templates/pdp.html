@@ -50,7 +50,7 @@
 
         <!-- Add to Project List -->
         <div class="col-lg-4 my-1">
-            {% if user.is_authenticated %} {% if projects %}
+            {% if user.is_authenticated %}
             <form class="formx" method="post" action="{% url 'my-projects' %}">
                 {% csrf_token %}
                 <input type="hidden" name="bc_sku" value="{{ master_product.bc_sku}}">
@@ -71,7 +71,7 @@
                     </div>
                 </div>
             </form>
-            {% endif %} {% endif %}
+            {% endif %}
         </div>
   
         

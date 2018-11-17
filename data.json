@@ -1,0 +1,3442 @@
+[
+{
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$100000$dDjTYITddmp4$6NJx0YXEWFq07hmj9sDU+RQadx5P+xOlXoL03Ewnbik=",
+        "last_login": "2018-11-01T01:47:19.198Z",
+        "is_superuser": true,
+        "username": "jake",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2018-08-28T21:29:14.142Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$100000$mscZQWW2mRdY$2/NbEN9BQDEjbVQgazKykguBa9OYQUL0N8AGaAzIH3Q=",
+        "last_login": "2018-08-29T22:17:42.302Z",
+        "is_superuser": false,
+        "username": "hello",
+        "first_name": "",
+        "last_name": "",
+        "email": "test@test.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2018-08-29T22:15:22.814Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$100000$NzjsCHLyDQyP$QcllACNUyl9eLkxSPDayatLO7KFY4LfornzmTAGI8lQ=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "hellojake",
+        "first_name": "",
+        "last_name": "",
+        "email": "test@test.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2018-08-29T22:15:54.967Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$100000$dalmOkNX2H2q$bjQGP4Eeig1XzZ31Cs5xwlMEFQxwSZPWpeZSo4wOkzs=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jakeyd",
+        "first_name": "",
+        "last_name": "",
+        "email": "jake@jake.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2018-08-29T22:19:23.775Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "d4ngqxy1e4izs7nawlxgallt741bza5b",
+    "fields": {
+        "session_data": "MDAwODcxMGZmZWJkMmE5MjFmMmRhOTI4MGJiYWFjMzAwMDRiNzRmMDp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIwYzNjZWI1ZjNiN2M5YTUyNmEyNjNmNDA4OTFlYTg0ZTQ0ZmZkNTcwIn0=",
+        "expire_date": "2018-10-02T01:53:26.425Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "l4btvvxk7bk4835iohhtx3ytw3omh1nf",
+    "fields": {
+        "session_data": "MDAwODcxMGZmZWJkMmE5MjFmMmRhOTI4MGJiYWFjMzAwMDRiNzRmMDp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIwYzNjZWI1ZjNiN2M5YTUyNmEyNjNmNDA4OTFlYTg0ZTQ0ZmZkNTcwIn0=",
+        "expire_date": "2018-11-15T01:47:19.219Z"
+    }
+},
+{
+    "model": "products.category",
+    "pk": "Bricks & Blocks",
+    "fields": {
+        "category_slug": "bricks-blocks",
+        "category_description": ""
+    }
+},
+{
+    "model": "products.subcategory",
+    "pk": "Blocks",
+    "fields": {
+        "subcategory_slug": "blocks",
+        "subcategory_description": "",
+        "category_name": "Bricks & Blocks"
+    }
+},
+{
+    "model": "products.subcategory",
+    "pk": "Bricks",
+    "fields": {
+        "subcategory_slug": "bricks",
+        "subcategory_description": "",
+        "category_name": "Bricks & Blocks"
+    }
+},
+{
+    "model": "products.merchant",
+    "pk": "basket compare",
+    "fields": {}
+},
+{
+    "model": "products.merchant",
+    "pk": "bq",
+    "fields": {}
+},
+{
+    "model": "products.merchant",
+    "pk": "homebase",
+    "fields": {}
+},
+{
+    "model": "products.merchant",
+    "pk": "screwfix",
+    "fields": {}
+},
+{
+    "model": "products.merchant",
+    "pk": "selco",
+    "fields": {}
+},
+{
+    "model": "products.merchant",
+    "pk": "toolstation",
+    "fields": {}
+},
+{
+    "model": "products.merchant",
+    "pk": "tradepoint",
+    "fields": {}
+},
+{
+    "model": "products.merchant",
+    "pk": "travis perkins",
+    "fields": {}
+},
+{
+    "model": "products.merchant",
+    "pk": "wickes",
+    "fields": {}
+},
+{
+    "model": "products.product",
+    "pk": 89,
+    "fields": {
+        "bc_sku": 100001,
+        "product_type": "compared_product",
+        "merchant": "selco",
+        "category": null,
+        "sub_category": "Blocks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Thermalite Hi&#8208;Strength 7 Block 100mm",
+        "product_pack_size": "42",
+        "product_url": "https://www.selcobw.com/thermalite-hi-strength-7-block-100mm",
+        "product_price": "2.15",
+        "product_offer": "",
+        "product_slug": "thermalite-hi8208strength-7-block-100mm"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 90,
+    "fields": {
+        "bc_sku": 100001,
+        "product_type": "compared_product",
+        "merchant": "travis perkins",
+        "category": null,
+        "sub_category": "Blocks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "H+H Celcon Hi&#8208;7 Aerated Concrete Block 7.3N 100mm Pack 100",
+        "product_pack_size": "",
+        "product_url": "https://www.travisperkins.co.uk/H%2BH-Celcon-Hi-7-Aerated-Concrete-Block-7-3N-100mm-Pack-100/p/837344",
+        "product_price": "342.35",
+        "product_offer": "",
+        "product_slug": "hh-celcon-hi82087-aerated-concrete-block-73n-100mm-pack-100"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 92,
+    "fields": {
+        "bc_sku": 100002,
+        "product_type": "compared_product",
+        "merchant": "selco",
+        "category": null,
+        "sub_category": "Blocks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Thermalite Hi&#8208;Strength 7 Block 150mm",
+        "product_pack_size": "",
+        "product_url": "https://www.selcobw.com/thermalite-hi-strength-7-block-150mm",
+        "product_price": "4.38",
+        "product_offer": "",
+        "product_slug": "thermalite-hi8208strength-7-block-150mm"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 93,
+    "fields": {
+        "bc_sku": 100003,
+        "product_type": "master_product",
+        "merchant": "basket compare",
+        "category": null,
+        "sub_category": "Blocks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Solid Dense Concrete Block 7.3N 140mm (Mixed Brands)",
+        "product_pack_size": "",
+        "product_url": "",
+        "product_price": null,
+        "product_offer": "",
+        "product_slug": "solid-dense-concrete-block-73n-140mm-mixed-brands"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 94,
+    "fields": {
+        "bc_sku": 100003,
+        "product_type": "compared_product",
+        "merchant": "travis perkins",
+        "category": null,
+        "sub_category": "Blocks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Solid Dense Concrete Block 7.3N 140mm",
+        "product_pack_size": "",
+        "product_url": "https://www.travisperkins.co.uk/Solid-Dense-7-3N-Concrete-Block-140mm/p/701037",
+        "product_price": "2.80",
+        "product_offer": "",
+        "product_slug": "solid-dense-concrete-block-73n-140mm"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 95,
+    "fields": {
+        "bc_sku": 100004,
+        "product_type": "master_product",
+        "merchant": "basket compare",
+        "category": null,
+        "sub_category": "Blocks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Solid Medium Dense Concrete Block 7.3N 100mm (Mixed Brands)",
+        "product_pack_size": "",
+        "product_url": "",
+        "product_price": null,
+        "product_offer": "",
+        "product_slug": "solid-medium-dense-concrete-block-73n-100mm-mixed-brands"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 96,
+    "fields": {
+        "bc_sku": 100004,
+        "product_type": "compared_product",
+        "merchant": "wickes",
+        "category": null,
+        "sub_category": "Blocks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Wickes Medium Dense Block 7.3N 100mm",
+        "product_pack_size": "",
+        "product_url": "https://www.wickes.co.uk/Medium-Dense-Block---7-3N-100mm/p/166860",
+        "product_price": "2.12",
+        "product_offer": "Buy 72 For &#163;1.70 Each",
+        "product_slug": "wickes-medium-dense-block-73n-100mm"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 97,
+    "fields": {
+        "bc_sku": 100004,
+        "product_type": "compared_product",
+        "merchant": "travis perkins",
+        "category": null,
+        "sub_category": "Blocks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Solid Medium Density Concrete Block 7.3N 100mm",
+        "product_pack_size": "",
+        "product_url": "https://www.travisperkins.co.uk/Hemelite-Solid-Medium-Density-7-3N-Concrete-Block-100mm/p/922113",
+        "product_price": "2.05",
+        "product_offer": "",
+        "product_slug": "solid-medium-density-concrete-block-73n-100mm"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 98,
+    "fields": {
+        "bc_sku": 100005,
+        "product_type": "master_product",
+        "merchant": "basket compare",
+        "category": null,
+        "sub_category": "Blocks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Solid Dense Concrete Block 7.3N 100mm (Mixed Brands)",
+        "product_pack_size": "",
+        "product_url": "",
+        "product_price": null,
+        "product_offer": "",
+        "product_slug": "solid-dense-concrete-block-73n-100mm-mixed-brands"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 99,
+    "fields": {
+        "bc_sku": 100005,
+        "product_type": "compared_product",
+        "merchant": "wickes",
+        "category": null,
+        "sub_category": "Blocks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Wickes Solid Dense Block 7.3N 100mm",
+        "product_pack_size": "",
+        "product_url": "https://www.wickes.co.uk/Tarmac-Standard-Dense-Block---7-3N-100mm/p/166859",
+        "product_price": "1.95",
+        "product_offer": "Buy 72 For &#163;1.50 Each",
+        "product_slug": "wickes-solid-dense-block-73n-100mm"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 100,
+    "fields": {
+        "bc_sku": 100005,
+        "product_type": "compared_product",
+        "merchant": "bq",
+        "category": null,
+        "sub_category": "Blocks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Aggregate Industries Grey Concrete Dense Block (H)215mm (W)100mm (L)440mm 13.7Kg",
+        "product_pack_size": "",
+        "product_url": "https://www.diy.com/departments/aggregate-industries-grey-concrete-dense-block-h-215mm-w-100mm-l-440mm-13700g/35854_BQ.prd",
+        "product_price": "1.42",
+        "product_offer": "",
+        "product_slug": "aggregate-industries-grey-concrete-dense-block-h215mm-w100mm-l440mm-137kg"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 101,
+    "fields": {
+        "bc_sku": 100005,
+        "product_type": "compared_product",
+        "merchant": "tradepoint",
+        "category": null,
+        "sub_category": "Blocks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Aggregate Industries Dense Block 7N/mm?&#178; 100mm",
+        "product_pack_size": "",
+        "product_url": "https://www.trade-point.co.uk/departments/aggregate-industries-grey-concrete-dense-block-h-215mm-w-100mm-l-440mm-13700g/35854_TP.prd",
+        "product_price": "1.42",
+        "product_offer": "",
+        "product_slug": "aggregate-industries-dense-block-7nmm178-100mm"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 102,
+    "fields": {
+        "bc_sku": 100005,
+        "product_type": "compared_product",
+        "merchant": "travis perkins",
+        "category": null,
+        "sub_category": "Blocks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Solid Dense Concrete Block 7.3N 100mm",
+        "product_pack_size": "",
+        "product_url": "https://www.travisperkins.co.uk/Solid-Dense-7-3N-Concrete-Block-100mm/p/700064",
+        "product_price": "1.82",
+        "product_offer": "",
+        "product_slug": "solid-dense-concrete-block-73n-100mm"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 104,
+    "fields": {
+        "bc_sku": 100006,
+        "product_type": "compared_product",
+        "merchant": "wickes",
+        "category": null,
+        "sub_category": "Blocks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Wickes Aerated Block 3.6 N 100mm",
+        "product_pack_size": "",
+        "product_url": "https://www.wickes.co.uk/Aerated-Block-3-6N-100mm-Single/p/177976",
+        "product_price": "1.60",
+        "product_offer": "",
+        "product_slug": "wickes-aerated-block-36-n-100mm"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 105,
+    "fields": {
+        "bc_sku": 100006,
+        "product_type": "compared_product",
+        "merchant": "wickes",
+        "category": null,
+        "sub_category": "Blocks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Cellumat Aerated Block &#8208; 3.6N 100mm",
+        "product_pack_size": "",
+        "product_url": "https://www.wickes.co.uk/Cellumat-Aerated-Block---3-6N-100mm/p/164235",
+        "product_price": "2.01",
+        "product_offer": "",
+        "product_slug": "cellumat-aerated-block-8208-36n-100mm"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 106,
+    "fields": {
+        "bc_sku": 100006,
+        "product_type": "compared_product",
+        "merchant": "bq",
+        "category": null,
+        "sub_category": "Blocks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Toplite Grey Aerated Concrete Block (H)215mm (W)100mm (L)440mm 6.1Kg",
+        "product_pack_size": "",
+        "product_url": "https://www.diy.com/departments/toplite-grey-aerated-concrete-block-h-215mm-w-100mm-l-440mm-6100g/645667_BQ.prd",
+        "product_price": "1.60",
+        "product_offer": "",
+        "product_slug": "toplite-grey-aerated-concrete-block-h215mm-w100mm-l440mm-61kg"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 107,
+    "fields": {
+        "bc_sku": 100006,
+        "product_type": "compared_product",
+        "merchant": "bq",
+        "category": null,
+        "sub_category": "Blocks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Toplite Grey Aerated Concrete Block (H)215mm (W)100mm (L)440mm 549000G 90 Blocks",
+        "product_pack_size": "",
+        "product_url": "https://www.diy.com/departments/toplite-grey-aerated-concrete-block-h-215mm-w-100mm-l-440mm-549000g/661457_BQ.prd",
+        "product_price": "144.00",
+        "product_offer": "Pallet Of 90 Blocks",
+        "product_slug": "toplite-grey-aerated-concrete-block-h215mm-w100mm-l440mm-549000g-90-blocks"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 108,
+    "fields": {
+        "bc_sku": 100006,
+        "product_type": "compared_product",
+        "merchant": "selco",
+        "category": null,
+        "sub_category": "Blocks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Thermalite Shield Block 100mm",
+        "product_pack_size": "",
+        "product_url": "https://www.selcobw.com/thermalite-shield-block-100mm",
+        "product_price": "1.38",
+        "product_offer": "",
+        "product_slug": "thermalite-shield-block-100mm"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 109,
+    "fields": {
+        "bc_sku": 100006,
+        "product_type": "compared_product",
+        "merchant": "tradepoint",
+        "category": null,
+        "sub_category": "Blocks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Toplite Grey Aerated Concrete Block (H)215mm (W)100mm (L)440mm 6100G",
+        "product_pack_size": "",
+        "product_url": "https://www.trade-point.co.uk/departments/toplite-grey-aerated-concrete-block-h-215mm-w-100mm-l-440mm-6100g/645667_TP.prd",
+        "product_price": "1.60",
+        "product_offer": "",
+        "product_slug": "toplite-grey-aerated-concrete-block-h215mm-w100mm-l440mm-6100g"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 110,
+    "fields": {
+        "bc_sku": 100006,
+        "product_type": "compared_product",
+        "merchant": "tradepoint",
+        "category": null,
+        "sub_category": "Blocks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Toplite Grey Aerated Concrete Block (H)215mm (W)100mm (L)440mm 549000G 90 Blocks",
+        "product_pack_size": "",
+        "product_url": "https://www.trade-point.co.uk/departments/toplite-grey-aerated-concrete-block-h-215mm-w-100mm-l-440mm-549000g/661457_TP.prd",
+        "product_price": "144.00",
+        "product_offer": "",
+        "product_slug": "toplite-grey-aerated-concrete-block-h215mm-w100mm-l440mm-549000g-90-blocks"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 111,
+    "fields": {
+        "bc_sku": 100006,
+        "product_type": "compared_product",
+        "merchant": "travis perkins",
+        "category": null,
+        "sub_category": "Blocks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "H+H Celcon Standard Aerated Concrete Block 3.6N 100mm",
+        "product_pack_size": "",
+        "product_url": "https://www.travisperkins.co.uk/H%2BH-Celcon-Standard-Aerated-3-6N-Concrete-Block-100mm/p/700055",
+        "product_price": "1.81",
+        "product_offer": "",
+        "product_slug": "hh-celcon-standard-aerated-concrete-block-36n-100mm"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 113,
+    "fields": {
+        "bc_sku": 100007,
+        "product_type": "compared_product",
+        "merchant": "wickes",
+        "category": null,
+        "sub_category": "Blocks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Wickes Foundation Block 3.6 N 300mm",
+        "product_pack_size": "",
+        "product_url": "https://www.wickes.co.uk/Wickes-Foundation-Block---3-6N-300mm/p/213639",
+        "product_price": "6.47",
+        "product_offer": "",
+        "product_slug": "wickes-foundation-block-36-n-300mm"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 114,
+    "fields": {
+        "bc_sku": 100007,
+        "product_type": "compared_product",
+        "merchant": "bq",
+        "category": null,
+        "sub_category": "Blocks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Toplite Grey Aerated Concrete Foundation Block (H)215mm (W)300mm (L)440mm 18400G",
+        "product_pack_size": "",
+        "product_url": "https://www.diy.com/departments/toplite-grey-aerated-concrete-foundation-block-h-215mm-w-300mm-l-440mm-18400g/898153_BQ.prd",
+        "product_price": "5.10",
+        "product_offer": "",
+        "product_slug": "toplite-grey-aerated-concrete-foundation-block-h215mm-w300mm-l440mm-18400g"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 115,
+    "fields": {
+        "bc_sku": 100007,
+        "product_type": "compared_product",
+        "merchant": "bq",
+        "category": null,
+        "sub_category": "Blocks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Toplite Grey Aerated Concrete Foundation Block (H)215mm (W)300mm (L)440mm 552000G 30 Blocks",
+        "product_pack_size": "",
+        "product_url": "https://www.diy.com/departments/toplite-grey-aerated-concrete-foundation-block-h-215mm-w-300mm-l-440mm-552000g/902181_BQ.prd",
+        "product_price": "153.00",
+        "product_offer": "Pallet Of 30 Blocks",
+        "product_slug": "toplite-grey-aerated-concrete-foundation-block-h215mm-w300mm-l440mm-552000g-30-blocks"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 116,
+    "fields": {
+        "bc_sku": 100007,
+        "product_type": "compared_product",
+        "merchant": "tradepoint",
+        "category": null,
+        "sub_category": "Blocks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Toplite Grey Aerated Concrete Foundation Block (H)215mm (W)300mm (L)440mm 18400G",
+        "product_pack_size": "",
+        "product_url": "https://www.trade-point.co.uk/departments/toplite-grey-aerated-concrete-foundation-block-h-215mm-w-300mm-l-440mm-18400g/898153_TP.prd",
+        "product_price": "5.10",
+        "product_offer": "",
+        "product_slug": "toplite-grey-aerated-concrete-foundation-block-h215mm-w300mm-l440mm-18400g"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 117,
+    "fields": {
+        "bc_sku": 100007,
+        "product_type": "compared_product",
+        "merchant": "tradepoint",
+        "category": null,
+        "sub_category": "Blocks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Toplite Grey Aerated Concrete Foundation Block (H)215mm (W)300mm (L)440mm 552000G 30 Blocks",
+        "product_pack_size": "",
+        "product_url": "https://www.trade-point.co.uk/departments/toplite-grey-aerated-concrete-foundation-block-h-215mm-w-300mm-l-440mm-552000g/902181_TP.prd",
+        "product_price": "153.00",
+        "product_offer": "",
+        "product_slug": "toplite-grey-aerated-concrete-foundation-block-h215mm-w300mm-l440mm-552000g-30-blocks"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 118,
+    "fields": {
+        "bc_sku": 100007,
+        "product_type": "compared_product",
+        "merchant": "travis perkins",
+        "category": null,
+        "sub_category": "Blocks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "H+H Celcon Standard Aerated Concrete Foundation Block 3.6N 300mm Pack 30",
+        "product_pack_size": "",
+        "product_url": "https://www.travisperkins.co.uk/H%2BH-Celcon-Standard-Aerated-Concrete-Foundation-Block-3-6N-300mm-Pack-30/p/878251",
+        "product_price": "271.00",
+        "product_offer": "",
+        "product_slug": "hh-celcon-standard-aerated-concrete-foundation-block-36n-300mm-pack-30"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 120,
+    "fields": {
+        "bc_sku": 100008,
+        "product_type": "compared_product",
+        "merchant": "wickes",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Wickes Square Hole Clay Airbrick 215X140mm",
+        "product_pack_size": "",
+        "product_url": "https://www.wickes.co.uk/Wickes-Square-Hole-Clay-Airbrick---215mm-x-140mm/p/101321",
+        "product_price": "4.99",
+        "product_offer": "",
+        "product_slug": "wickes-square-hole-clay-airbrick-215x140mm"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 121,
+    "fields": {
+        "bc_sku": 100008,
+        "product_type": "compared_product",
+        "merchant": "travis perkins",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Hepworth Red Square Hole Airbrick 140mm",
+        "product_pack_size": "",
+        "product_url": "https://www.travisperkins.co.uk/Hepworth-Square-Hole-Airbrick-215-x-140mm-Red-YA14R/p/867145",
+        "product_price": "11.95",
+        "product_offer": "",
+        "product_slug": "hepworth-red-square-hole-airbrick-140mm"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 122,
+    "fields": {
+        "bc_sku": 100009,
+        "product_type": "master_product",
+        "merchant": "basket compare",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Air Brick Red 215 X 215mm (Mixed Brands)",
+        "product_pack_size": "",
+        "product_url": "",
+        "product_price": null,
+        "product_offer": "",
+        "product_slug": "air-brick-red-215-x-215mm-mixed-brands"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 123,
+    "fields": {
+        "bc_sku": 100009,
+        "product_type": "compared_product",
+        "merchant": "selco",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Air Brick 215 X 215mm (9\" X 9\")",
+        "product_pack_size": "",
+        "product_url": "https://www.selcobw.com/air-brick-215-x-215mm-9-x-9-25",
+        "product_price": "24.59",
+        "product_offer": "",
+        "product_slug": "air-brick-215-x-215mm-9-x-9"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 125,
+    "fields": {
+        "bc_sku": 100010,
+        "product_type": "compared_product",
+        "merchant": "wickes",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Wickes Square Hole Clay Airbrick 215X65mm",
+        "product_pack_size": "",
+        "product_url": "https://www.wickes.co.uk/Wickes-Square-Hole-Clay-Airbrick---215mm-x-65mm/p/101320",
+        "product_price": "3.99",
+        "product_offer": "",
+        "product_slug": "wickes-square-hole-clay-airbrick-215x65mm"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 126,
+    "fields": {
+        "bc_sku": 100010,
+        "product_type": "compared_product",
+        "merchant": "selco",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Air Brick 215 X 65mm (9\" X 3\")",
+        "product_pack_size": "",
+        "product_url": "https://www.selcobw.com/air-brick-215-x-65mm-9-x-3-24",
+        "product_price": "5.63",
+        "product_offer": "",
+        "product_slug": "air-brick-215-x-65mm-9-x-3"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 127,
+    "fields": {
+        "bc_sku": 100010,
+        "product_type": "compared_product",
+        "merchant": "travis perkins",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Hepworth Red Square Hole Airbrick 65mm",
+        "product_pack_size": "",
+        "product_url": "https://www.travisperkins.co.uk/Hepworth-Square-Hole-Airbrick-215-x-65mm-Red-YA13R/p/867143",
+        "product_price": "6.73",
+        "product_offer": "",
+        "product_slug": "hepworth-red-square-hole-airbrick-65mm"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 128,
+    "fields": {
+        "bc_sku": 100011,
+        "product_type": "master_product",
+        "merchant": "basket compare",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Class B Blue Engineering Brick 65mm (Mixed Brands)",
+        "product_pack_size": "",
+        "product_url": "",
+        "product_price": null,
+        "product_offer": "",
+        "product_slug": "class-b-blue-engineering-brick-65mm-mixed-brands"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 129,
+    "fields": {
+        "bc_sku": 100011,
+        "product_type": "compared_product",
+        "merchant": "travis perkins",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Wienerberger Engineering Brick Blue Perforated Class B &#8208; Pack Of 400",
+        "product_pack_size": "",
+        "product_url": "https://www.travisperkins.co.uk/Wienerberger-%28Terca%29-Engineering-Brick-Blue-Perforated-Class-B-65mm---400-Pack/p/834684",
+        "product_price": "288.00",
+        "product_offer": "",
+        "product_slug": "wienerberger-engineering-brick-blue-perforated-class-b-8208-pack-of-400"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 130,
+    "fields": {
+        "bc_sku": 100012,
+        "product_type": "master_product",
+        "merchant": "basket compare",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "London Brick Company Lbc Commons Facing Brick 65mm",
+        "product_pack_size": "",
+        "product_url": "",
+        "product_price": null,
+        "product_offer": "",
+        "product_slug": "london-brick-company-lbc-commons-facing-brick-65mm"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 131,
+    "fields": {
+        "bc_sku": 100012,
+        "product_type": "compared_product",
+        "merchant": "wickes",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "London Brick Company Lbc Commons Facing Brick 65mm",
+        "product_pack_size": "",
+        "product_url": "https://www.wickes.co.uk/LBC-Commons-Facing-Brick---Buff-65mm/p/119492",
+        "product_price": "1.00",
+        "product_offer": "Buy 390 For &#163;0.90 Each",
+        "product_slug": "london-brick-company-lbc-commons-facing-brick-65mm"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 132,
+    "fields": {
+        "bc_sku": 100012,
+        "product_type": "compared_product",
+        "merchant": "selco",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Lbc Common Brick 65mm",
+        "product_pack_size": "",
+        "product_url": "https://www.selcobw.com/lbc-common-brick-65mm",
+        "product_price": "0.78",
+        "product_offer": "",
+        "product_slug": "lbc-common-brick-65mm"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 133,
+    "fields": {
+        "bc_sku": 100012,
+        "product_type": "compared_product",
+        "merchant": "travis perkins",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "London Brick Company Facing Brick Commons &#8208; Pack Of 390",
+        "product_pack_size": "",
+        "product_url": "https://www.travisperkins.co.uk/London-Brick-Company-Facing-Brick-Commons---Pack-of-390/p/700113",
+        "product_price": "350.39",
+        "product_offer": "",
+        "product_slug": "london-brick-company-facing-brick-commons-8208-pack-of-390"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 134,
+    "fields": {
+        "bc_sku": 100013,
+        "product_type": "master_product",
+        "merchant": "basket compare",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "London Brick Company Lbc Heather Facing Brick 65mm",
+        "product_pack_size": "",
+        "product_url": "",
+        "product_price": null,
+        "product_offer": "",
+        "product_slug": "london-brick-company-lbc-heather-facing-brick-65mm"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 135,
+    "fields": {
+        "bc_sku": 100013,
+        "product_type": "compared_product",
+        "merchant": "wickes",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "London Brick Company Lbc Heather Facing Brick 65mm",
+        "product_pack_size": "",
+        "product_url": "https://www.wickes.co.uk/LBC-Heather-Facing-Brick---Red-65mm/p/119491",
+        "product_price": "1.20",
+        "product_offer": "Buy 390 For &#163;1.10 Each",
+        "product_slug": "london-brick-company-lbc-heather-facing-brick-65mm"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 136,
+    "fields": {
+        "bc_sku": 100013,
+        "product_type": "compared_product",
+        "merchant": "selco",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Lbc Heather Brick 65mm",
+        "product_pack_size": "",
+        "product_url": "https://www.selcobw.com/lbc-heather-brick-65mm",
+        "product_price": "0.95",
+        "product_offer": "",
+        "product_slug": "lbc-heather-brick-65mm"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 137,
+    "fields": {
+        "bc_sku": 100013,
+        "product_type": "compared_product",
+        "merchant": "travis perkins",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "London Brick Company Facing Brick Heather &#8208; Pack Of 390",
+        "product_pack_size": "",
+        "product_url": "https://www.travisperkins.co.uk/London-Brick-Company-%28Forterra%29-Heather-Facing-Brick---390-Pack/p/700110",
+        "product_price": "443.29",
+        "product_offer": "",
+        "product_slug": "london-brick-company-facing-brick-heather-8208-pack-of-390"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 138,
+    "fields": {
+        "bc_sku": 100014,
+        "product_type": "master_product",
+        "merchant": "basket compare",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "London Brick Company Lbc Tudor Facing Brick 65mm",
+        "product_pack_size": "",
+        "product_url": "",
+        "product_price": null,
+        "product_offer": "",
+        "product_slug": "london-brick-company-lbc-tudor-facing-brick-65mm"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 139,
+    "fields": {
+        "bc_sku": 100014,
+        "product_type": "compared_product",
+        "merchant": "wickes",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "London Brick Company Lbc Tudor Facing Brick 65mm",
+        "product_pack_size": "",
+        "product_url": "https://www.wickes.co.uk/LBC-Tudor-Facing-Brick---Red-65mm/p/119494",
+        "product_price": "1.10",
+        "product_offer": "Buy 390 For &#163;1.00 Each",
+        "product_slug": "london-brick-company-lbc-tudor-facing-brick-65mm"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 140,
+    "fields": {
+        "bc_sku": 100014,
+        "product_type": "compared_product",
+        "merchant": "selco",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Lbc Tudor Brick 65mm",
+        "product_pack_size": "",
+        "product_url": "https://www.selcobw.com/lbc-tudor-brick-65mm",
+        "product_price": "0.90",
+        "product_offer": "",
+        "product_slug": "lbc-tudor-brick-65mm"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 141,
+    "fields": {
+        "bc_sku": 100014,
+        "product_type": "compared_product",
+        "merchant": "travis perkins",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "London Brick Company Facing Brick Tudor &#8208; Pack Of 390",
+        "product_pack_size": "",
+        "product_url": "https://www.travisperkins.co.uk/London-Brick-Company-%28Forterra%29-Tudor-Facing-Brick---390-Pack/p/700116",
+        "product_price": "434.03",
+        "product_offer": "",
+        "product_slug": "london-brick-company-facing-brick-tudor-8208-pack-of-390"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 142,
+    "fields": {
+        "bc_sku": 100015,
+        "product_type": "master_product",
+        "merchant": "basket compare",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Class B Red Engineering Brick 65mm (Mixed Brands)",
+        "product_pack_size": "",
+        "product_url": "",
+        "product_price": null,
+        "product_offer": "",
+        "product_slug": "class-b-red-engineering-brick-65mm-mixed-brands"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 143,
+    "fields": {
+        "bc_sku": 100015,
+        "product_type": "compared_product",
+        "merchant": "wickes",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Class B Red Engineering Brick 65mm",
+        "product_pack_size": "",
+        "product_url": "https://www.wickes.co.uk/Class-B-Red-Engineering-Brick-65mm/p/174990",
+        "product_price": "0.40",
+        "product_offer": "",
+        "product_slug": "class-b-red-engineering-brick-65mm"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 144,
+    "fields": {
+        "bc_sku": 100015,
+        "product_type": "compared_product",
+        "merchant": "bq",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Class B Engineering Brick (H)65mm (D)102.5mm (W)215mm",
+        "product_pack_size": "",
+        "product_url": "https://www.diy.com/departments/wienerberger-terracotta-clay-class-b-engineering-brick-h-65mm-w-215mm-2160g/573335_BQ.prd",
+        "product_price": "0.47",
+        "product_offer": "",
+        "product_slug": "class-b-engineering-brick-h65mm-d1025mm-w215mm"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 145,
+    "fields": {
+        "bc_sku": 100015,
+        "product_type": "compared_product",
+        "merchant": "selco",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "65mm Class B Engineering Brick",
+        "product_pack_size": "",
+        "product_url": "https://www.selcobw.com/65mm-class-b-engineering-brick",
+        "product_price": "0.47",
+        "product_offer": "",
+        "product_slug": "65mm-class-b-engineering-brick"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 146,
+    "fields": {
+        "bc_sku": 100015,
+        "product_type": "compared_product",
+        "merchant": "tradepoint",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Wienerberger Terracotta Clay Class B Engineering Brick (H)65mm (W)215mm 2160G",
+        "product_pack_size": "",
+        "product_url": "https://www.trade-point.co.uk/departments/wienerberger-terracotta-clay-class-b-engineering-brick-h-65mm-w-215mm-2160g/573335_TP.prd",
+        "product_price": "0.47",
+        "product_offer": "",
+        "product_slug": "wienerberger-terracotta-clay-class-b-engineering-brick-h65mm-w215mm-2160g"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 147,
+    "fields": {
+        "bc_sku": 100015,
+        "product_type": "compared_product",
+        "merchant": "travis perkins",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Wienerberger Engineering Brick Red Perforated Class B 65mm &#8208; Pack Of 400",
+        "product_pack_size": "",
+        "product_url": "https://www.travisperkins.co.uk/Wienerberger-%28Terca%29-Engineering-Brick-Red-Perforated-Class-B-65mm---400-Pack/p/870923",
+        "product_price": "321.60",
+        "product_offer": "",
+        "product_slug": "wienerberger-engineering-brick-red-perforated-class-b-65mm-8208-pack-of-400"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 148,
+    "fields": {
+        "bc_sku": 100016,
+        "product_type": "master_product",
+        "merchant": "basket compare",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Concrete Brick Grey 65mm (Mixed Brands)",
+        "product_pack_size": "",
+        "product_url": "",
+        "product_price": null,
+        "product_offer": "",
+        "product_slug": "concrete-brick-grey-65mm-mixed-brands"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 149,
+    "fields": {
+        "bc_sku": 100016,
+        "product_type": "compared_product",
+        "merchant": "bq",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Grey Reconstituted Stone Concrete Common Brick (H)65mm (W)103mm (L)215mm 2.85Kg",
+        "product_pack_size": "",
+        "product_url": "https://www.diy.com/departments/grey-reconstituted-stone-concrete-common-brick-h-65mm-w-103mm-l-215mm-2850g/54119_BQ.prd",
+        "product_price": "0.41",
+        "product_offer": "",
+        "product_slug": "grey-reconstituted-stone-concrete-common-brick-h65mm-w103mm-l215mm-285kg"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 150,
+    "fields": {
+        "bc_sku": 100016,
+        "product_type": "compared_product",
+        "merchant": "tradepoint",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Grey Reconstituted Stone Concrete Common Brick (H)65mm (W)103mm (L)215mm 2850G",
+        "product_pack_size": "",
+        "product_url": "https://www.trade-point.co.uk/departments/grey-reconstituted-stone-concrete-common-brick-h-65mm-w-103mm-l-215mm-2850g/54119_TP.prd",
+        "product_price": "0.41",
+        "product_offer": "",
+        "product_slug": "grey-reconstituted-stone-concrete-common-brick-h65mm-w103mm-l215mm-2850g"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 151,
+    "fields": {
+        "bc_sku": 100016,
+        "product_type": "compared_product",
+        "merchant": "travis perkins",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Pd Edenhall Concrete Common 20N Solid Brick 65mm &#8208; Pack Of 448",
+        "product_pack_size": "",
+        "product_url": "https://www.travisperkins.co.uk/PD-Edenhall-20N-Dense-Concrete-Common-Brick-65mm---448-Pack/p/863319",
+        "product_price": "145.15",
+        "product_offer": "",
+        "product_slug": "pd-edenhall-concrete-common-20n-solid-brick-65mm-8208-pack-of-448"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 152,
+    "fields": {
+        "bc_sku": 100017,
+        "product_type": "master_product",
+        "merchant": "basket compare",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Perforated Red Facing Brick 65mm (Mixed Brands)",
+        "product_pack_size": "",
+        "product_url": "",
+        "product_price": null,
+        "product_offer": "",
+        "product_slug": "perforated-red-facing-brick-65mm-mixed-brands"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 153,
+    "fields": {
+        "bc_sku": 100017,
+        "product_type": "compared_product",
+        "merchant": "wickes",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Forterra Harrow Multi Red Facing Brick",
+        "product_pack_size": "",
+        "product_url": "https://www.wickes.co.uk/Forterra-Harrow-Facing-Brick---Multi-Red-65mm/p/119490",
+        "product_price": "1.00",
+        "product_offer": "Buy 495 For &#163;0.85 Each",
+        "product_slug": "forterra-harrow-multi-red-facing-brick"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 154,
+    "fields": {
+        "bc_sku": 100017,
+        "product_type": "compared_product",
+        "merchant": "wickes",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Wickes Multi Red Facing Brick 65mm",
+        "product_pack_size": "",
+        "product_url": "https://www.wickes.co.uk/Wickes-Facing-Brick---Multi-Red-65mm/p/213633",
+        "product_price": "1.00",
+        "product_offer": "Buy 495 For &#163;0.85 Each",
+        "product_slug": "wickes-multi-red-facing-brick-65mm"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 155,
+    "fields": {
+        "bc_sku": 100017,
+        "product_type": "compared_product",
+        "merchant": "bq",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Wienerberger Brick Red Clay Facing Brick (H)102.5mm (W)65mm (L)215mm 2.206Kg",
+        "product_pack_size": "",
+        "product_url": "https://www.diy.com/departments/wienerberger-brick-red-clay-facing-brick-h-102-5mm-w-65mm-l-215mm-2206g/54157_BQ.prd",
+        "product_price": "0.65",
+        "product_offer": "",
+        "product_slug": "wienerberger-brick-red-clay-facing-brick-h1025mm-w65mm-l215mm-2206kg"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 156,
+    "fields": {
+        "bc_sku": 100017,
+        "product_type": "compared_product",
+        "merchant": "selco",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Baggeridge Tabasco Red Brick",
+        "product_pack_size": "",
+        "product_url": "https://www.selcobw.com/baggeridge-tabasco-red-brick",
+        "product_price": "0.66",
+        "product_offer": "",
+        "product_slug": "baggeridge-tabasco-red-brick"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 157,
+    "fields": {
+        "bc_sku": 100017,
+        "product_type": "compared_product",
+        "merchant": "tradepoint",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Wienerberger Brick Red Clay Facing Brick (H)102.5mm (W)65mm (L)215mm 2206G",
+        "product_pack_size": "",
+        "product_url": "https://www.trade-point.co.uk/departments/wienerberger-brick-red-clay-facing-brick-h-102-5mm-w-65mm-l-215mm-2206g/54157_TP.prd",
+        "product_price": "0.65",
+        "product_offer": "",
+        "product_slug": "wienerberger-brick-red-clay-facing-brick-h1025mm-w65mm-l215mm-2206g"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 158,
+    "fields": {
+        "bc_sku": 100017,
+        "product_type": "compared_product",
+        "merchant": "travis perkins",
+        "category": null,
+        "sub_category": "Bricks",
+        "product_sku_1": "",
+        "product_sku_2": "",
+        "product_brand": null,
+        "product_description": "Forterra Facing Brick Clumber Red &#8208; Pack Of 495",
+        "product_pack_size": "",
+        "product_url": "https://www.travisperkins.co.uk/Forterra-Facing-Brick-Clumber-Red---Pack-of-495/p/619102",
+        "product_price": "433.20",
+        "product_offer": "",
+        "product_slug": "forterra-facing-brick-clumber-red-8208-pack-of-495"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 159,
+    "fields": {
+        "bc_sku": 100017,
+        "product_type": "compared_product",
+        "merchant": "wickes",
+        "category": "Bricks & Blocks",
+        "sub_category": "Blocks",
+        "product_sku_1": null,
+        "product_sku_2": null,
+        "product_brand": null,
+        "product_description": "tester 123",
+        "product_pack_size": null,
+        "product_url": null,
+        "product_price": "0.10",
+        "product_offer": null,
+        "product_slug": "tester-123"
+    }
+},
+{
+    "model": "products.profile",
+    "pk": 2,
+    "fields": {
+        "user": [
+            "jake"
+        ],
+        "favourites": [
+            122,
+            128,
+            142
+        ]
+    }
+},
+{
+    "model": "products.profile",
+    "pk": 3,
+    "fields": {
+        "user": [
+            "hello"
+        ],
+        "favourites": []
+    }
+},
+{
+    "model": "products.profile",
+    "pk": 4,
+    "fields": {
+        "user": [
+            "hellojake"
+        ],
+        "favourites": []
+    }
+},
+{
+    "model": "products.profile",
+    "pk": 5,
+    "fields": {
+        "user": [
+            "jakeyd"
+        ],
+        "favourites": []
+    }
+},
+{
+    "model": "products.project",
+    "pk": 10,
+    "fields": {
+        "name": "hi",
+        "user": [
+            "hello"
+        ],
+        "project_slug": null,
+        "merchants": []
+    }
+},
+{
+    "model": "products.project",
+    "pk": 37,
+    "fields": {
+        "name": "jake's lawn",
+        "user": [
+            "jake"
+        ],
+        "project_slug": "jakes-lawn",
+        "merchants": [
+            "bq",
+            "homebase"
+        ]
+    }
+},
+{
+    "model": "products.project",
+    "pk": 38,
+    "fields": {
+        "name": "Safe",
+        "user": [
+            "jake"
+        ],
+        "project_slug": "safe",
+        "merchants": [
+            "homebase",
+            "toolstation",
+            "tradepoint"
+        ]
+    }
+},
+{
+    "model": "products.project",
+    "pk": 39,
+    "fields": {
+        "name": "jake's lawnsss",
+        "user": [
+            "jake"
+        ],
+        "project_slug": "jakes-lawnsss",
+        "merchants": [
+            "homebase"
+        ]
+    }
+},
+{
+    "model": "products.project",
+    "pk": 40,
+    "fields": {
+        "name": "hi",
+        "user": [
+            "jake"
+        ],
+        "project_slug": "hi",
+        "merchants": [
+            "bq",
+            "homebase",
+            "screwfix",
+            "selco",
+            "toolstation",
+            "tradepoint",
+            "travis perkins",
+            "wickes"
+        ]
+    }
+},
+{
+    "model": "products.project_item",
+    "pk": 1,
+    "fields": {
+        "quantity": 1,
+        "project": 37,
+        "item": []
+    }
+},
+{
+    "model": "products.project_item",
+    "pk": 2,
+    "fields": {
+        "quantity": 1,
+        "project": 37,
+        "item": []
+    }
+},
+{
+    "model": "products.project_item",
+    "pk": 3,
+    "fields": {
+        "quantity": 1,
+        "project": 38,
+        "item": []
+    }
+},
+{
+    "model": "products.project_item",
+    "pk": 4,
+    "fields": {
+        "quantity": 4,
+        "project": 38,
+        "item": []
+    }
+},
+{
+    "model": "products.project_item",
+    "pk": 5,
+    "fields": {
+        "quantity": 2,
+        "project": 38,
+        "item": [
+            122
+        ]
+    }
+},
+{
+    "model": "products.project_item",
+    "pk": 6,
+    "fields": {
+        "quantity": 4,
+        "project": 38,
+        "item": [
+            122
+        ]
+    }
+},
+{
+    "model": "products.project_item",
+    "pk": 7,
+    "fields": {
+        "quantity": 1,
+        "project": 37,
+        "item": [
+            122
+        ]
+    }
+},
+{
+    "model": "products.project_item",
+    "pk": 8,
+    "fields": {
+        "quantity": 1,
+        "project": 37,
+        "item": [
+            122
+        ]
+    }
+},
+{
+    "model": "products.project_item",
+    "pk": 9,
+    "fields": {
+        "quantity": 1,
+        "project": 37,
+        "item": []
+    }
+},
+{
+    "model": "products.project_item",
+    "pk": 10,
+    "fields": {
+        "quantity": 1,
+        "project": 37,
+        "item": [
+            122
+        ]
+    }
+},
+{
+    "model": "products.project_item",
+    "pk": 11,
+    "fields": {
+        "quantity": 6,
+        "project": 37,
+        "item": [
+            122
+        ]
+    }
+},
+{
+    "model": "products.project_item",
+    "pk": 12,
+    "fields": {
+        "quantity": 3,
+        "project": 37,
+        "item": [
+            122
+        ]
+    }
+},
+{
+    "model": "products.project_item",
+    "pk": 13,
+    "fields": {
+        "quantity": 4,
+        "project": 37,
+        "item": []
+    }
+},
+{
+    "model": "products.project_item",
+    "pk": 14,
+    "fields": {
+        "quantity": 5,
+        "project": 37,
+        "item": []
+    }
+},
+{
+    "model": "products.project_item",
+    "pk": 15,
+    "fields": {
+        "quantity": 6,
+        "project": 37,
+        "item": [
+            122
+        ]
+    }
+},
+{
+    "model": "products.project_item",
+    "pk": 16,
+    "fields": {
+        "quantity": 6,
+        "project": 37,
+        "item": [
+            122
+        ]
+    }
+},
+{
+    "model": "products.project_item",
+    "pk": 17,
+    "fields": {
+        "quantity": 17,
+        "project": 37,
+        "item": [
+            122
+        ]
+    }
+},
+{
+    "model": "products.project_item",
+    "pk": 18,
+    "fields": {
+        "quantity": 17,
+        "project": 37,
+        "item": [
+            122
+        ]
+    }
+},
+{
+    "model": "products.project_item",
+    "pk": 19,
+    "fields": {
+        "quantity": 1,
+        "project": 37,
+        "item": [
+            122
+        ]
+    }
+},
+{
+    "model": "products.project_item",
+    "pk": 20,
+    "fields": {
+        "quantity": 1,
+        "project": 37,
+        "item": [
+            122
+        ]
+    }
+},
+{
+    "model": "products.project_item",
+    "pk": 21,
+    "fields": {
+        "quantity": 1,
+        "project": 38,
+        "item": [
+            128
+        ]
+    }
+},
+{
+    "model": "products.project_item",
+    "pk": 22,
+    "fields": {
+        "quantity": 1,
+        "project": 38,
+        "item": [
+            128
+        ]
+    }
+},
+{
+    "model": "products.project_item",
+    "pk": 23,
+    "fields": {
+        "quantity": 1,
+        "project": 37,
+        "item": [
+            128
+        ]
+    }
+},
+{
+    "model": "products.project_item",
+    "pk": 24,
+    "fields": {
+        "quantity": 1,
+        "project": 37,
+        "item": [
+            128
+        ]
+    }
+},
+{
+    "model": "products.project_item",
+    "pk": 25,
+    "fields": {
+        "quantity": 1,
+        "project": 37,
+        "item": [
+            128
+        ]
+    }
+},
+{
+    "model": "products.project_item",
+    "pk": 26,
+    "fields": {
+        "quantity": 1,
+        "project": 37,
+        "item": [
+            142
+        ]
+    }
+},
+{
+    "model": "products.project_item",
+    "pk": 27,
+    "fields": {
+        "quantity": 1,
+        "project": 37,
+        "item": [
+            142
+        ]
+    }
+},
+{
+    "model": "products.project_item",
+    "pk": 28,
+    "fields": {
+        "quantity": 1,
+        "project": 37,
+        "item": [
+            142
+        ]
+    }
+},
+{
+    "model": "products.project_item",
+    "pk": 29,
+    "fields": {
+        "quantity": 1,
+        "project": 37,
+        "item": [
+            122
+        ]
+    }
+},
+{
+    "model": "products.project_item",
+    "pk": 30,
+    "fields": {
+        "quantity": 5,
+        "project": 40,
+        "item": [
+            142
+        ]
+    }
+},
+{
+    "model": "products.project_item",
+    "pk": 31,
+    "fields": {
+        "quantity": 3,
+        "project": 40,
+        "item": [
+            152
+        ]
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 103,
+    "fields": {
+        "action_time": "2018-08-28T21:34:40.318Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "merchant"
+        ],
+        "object_id": "basket compare",
+        "object_repr": "basket compare",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 104,
+    "fields": {
+        "action_time": "2018-08-28T21:34:42.899Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "merchant"
+        ],
+        "object_id": "bq",
+        "object_repr": "bq",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 105,
+    "fields": {
+        "action_time": "2018-08-28T21:34:45.336Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "merchant"
+        ],
+        "object_id": "homebase",
+        "object_repr": "homebase",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 106,
+    "fields": {
+        "action_time": "2018-08-28T21:34:47.415Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "merchant"
+        ],
+        "object_id": "screwfix",
+        "object_repr": "screwfix",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 107,
+    "fields": {
+        "action_time": "2018-08-28T21:34:49.602Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "merchant"
+        ],
+        "object_id": "selco",
+        "object_repr": "selco",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 108,
+    "fields": {
+        "action_time": "2018-08-28T21:34:51.708Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "merchant"
+        ],
+        "object_id": "toolstation",
+        "object_repr": "toolstation",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 109,
+    "fields": {
+        "action_time": "2018-08-28T21:34:54.883Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "merchant"
+        ],
+        "object_id": "tradepoint",
+        "object_repr": "tradepoint",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 110,
+    "fields": {
+        "action_time": "2018-08-28T21:34:57.163Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "merchant"
+        ],
+        "object_id": "travis perkins",
+        "object_repr": "travis perkins",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 111,
+    "fields": {
+        "action_time": "2018-08-28T21:35:02.376Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "merchant"
+        ],
+        "object_id": "wickes",
+        "object_repr": "wickes",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 112,
+    "fields": {
+        "action_time": "2018-08-28T21:35:23.730Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "category"
+        ],
+        "object_id": "Bricks & Blocks",
+        "object_repr": "Bricks & Blocks",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 113,
+    "fields": {
+        "action_time": "2018-08-28T21:35:42.456Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "subcategory"
+        ],
+        "object_id": "Bricks",
+        "object_repr": "Bricks",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 114,
+    "fields": {
+        "action_time": "2018-08-28T21:35:49.631Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "subcategory"
+        ],
+        "object_id": "Blocks",
+        "object_repr": "Blocks",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 115,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.183Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "88",
+        "object_repr": "Aerated Block 7.3 N 100mm (Mixed Brands)",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 116,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.193Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "89",
+        "object_repr": "Thermalite Hi&#8208;Strength 7 Block 100mm",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 117,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.202Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "90",
+        "object_repr": "H+H Celcon Hi&#8208;7 Aerated Concrete Block 7.3N 100mm Pack 100",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 118,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.212Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "91",
+        "object_repr": "Aerated Block 7.3N 150mm (Mixed Brands)",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 119,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.220Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "92",
+        "object_repr": "Thermalite Hi&#8208;Strength 7 Block 150mm",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 120,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.230Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "93",
+        "object_repr": "Solid Dense Concrete Block 7.3N 140mm (Mixed Brands)",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 121,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.239Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "94",
+        "object_repr": "Solid Dense Concrete Block 7.3N 140mm",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 122,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.252Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "95",
+        "object_repr": "Solid Medium Dense Concrete Block 7.3N 100mm (Mixed Brands)",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 123,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.262Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "96",
+        "object_repr": "Wickes Medium Dense Block 7.3N 100mm",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 124,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.271Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "97",
+        "object_repr": "Solid Medium Density Concrete Block 7.3N 100mm",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 125,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.280Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "98",
+        "object_repr": "Solid Dense Concrete Block 7.3N 100mm (Mixed Brands)",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 126,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.290Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "99",
+        "object_repr": "Wickes Solid Dense Block 7.3N 100mm",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 127,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.299Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "100",
+        "object_repr": "Aggregate Industries Grey Concrete Dense Block (H)215mm (W)100mm (L)440mm 13.7Kg",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 128,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.308Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "101",
+        "object_repr": "Aggregate Industries Dense Block 7N/mm?&#178; 100mm",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 129,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.317Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "102",
+        "object_repr": "Solid Dense Concrete Block 7.3N 100mm",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 130,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.327Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "103",
+        "object_repr": "Aerated Block 3.6 N 100mm (Mixed Brands)",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 131,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.336Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "104",
+        "object_repr": "Wickes Aerated Block 3.6 N 100mm",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 132,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.346Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "105",
+        "object_repr": "Cellumat Aerated Block &#8208; 3.6N 100mm",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 133,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.355Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "106",
+        "object_repr": "Toplite Grey Aerated Concrete Block (H)215mm (W)100mm (L)440mm 6.1Kg",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 134,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.365Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "107",
+        "object_repr": "Toplite Grey Aerated Concrete Block (H)215mm (W)100mm (L)440mm 549000G 90 Blocks",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 135,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.374Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "108",
+        "object_repr": "Thermalite Shield Block 100mm",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 136,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.383Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "109",
+        "object_repr": "Toplite Grey Aerated Concrete Block (H)215mm (W)100mm (L)440mm 6100G",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 137,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.392Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "110",
+        "object_repr": "Toplite Grey Aerated Concrete Block (H)215mm (W)100mm (L)440mm 549000G 90 Blocks",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 138,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.402Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "111",
+        "object_repr": "H+H Celcon Standard Aerated Concrete Block 3.6N 100mm",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 139,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.412Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "112",
+        "object_repr": "Aerated Foundation Block 3.6 N 300mm (Mixed Brands)",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 140,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.421Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "113",
+        "object_repr": "Wickes Foundation Block 3.6 N 300mm",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 141,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.430Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "114",
+        "object_repr": "Toplite Grey Aerated Concrete Foundation Block (H)215mm (W)300mm (L)440mm 18400G",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 142,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.440Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "115",
+        "object_repr": "Toplite Grey Aerated Concrete Foundation Block (H)215mm (W)300mm (L)440mm 552000G 30 Blocks",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 143,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.449Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "116",
+        "object_repr": "Toplite Grey Aerated Concrete Foundation Block (H)215mm (W)300mm (L)440mm 18400G",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 144,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.458Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "117",
+        "object_repr": "Toplite Grey Aerated Concrete Foundation Block (H)215mm (W)300mm (L)440mm 552000G 30 Blocks",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 145,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.470Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "118",
+        "object_repr": "H+H Celcon Standard Aerated Concrete Foundation Block 3.6N 300mm Pack 30",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 146,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.480Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "119",
+        "object_repr": "Air Brick Red 215 X 140mm (Mixed Brands)",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 147,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.489Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "120",
+        "object_repr": "Wickes Square Hole Clay Airbrick 215X140mm",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 148,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.500Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "121",
+        "object_repr": "Hepworth Red Square Hole Airbrick 140mm",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 149,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.510Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "122",
+        "object_repr": "Air Brick Red 215 X 215mm (Mixed Brands)",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 150,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.520Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "123",
+        "object_repr": "Air Brick 215 X 215mm (9\" X 9\")",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 151,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.530Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "124",
+        "object_repr": "Air Brick Red 215 X 65mm (Mixed Brands)",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 152,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.540Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "125",
+        "object_repr": "Wickes Square Hole Clay Airbrick 215X65mm",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 153,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.550Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "126",
+        "object_repr": "Air Brick 215 X 65mm (9\" X 3\")",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 154,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.561Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "127",
+        "object_repr": "Hepworth Red Square Hole Airbrick 65mm",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 155,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.571Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "128",
+        "object_repr": "Class B Blue Engineering Brick 65mm (Mixed Brands)",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 156,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.580Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "129",
+        "object_repr": "Wienerberger Engineering Brick Blue Perforated Class B &#8208; Pack Of 400",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 157,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.591Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "130",
+        "object_repr": "London Brick Company Lbc Commons Facing Brick 65mm",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 158,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.601Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "131",
+        "object_repr": "London Brick Company Lbc Commons Facing Brick 65mm",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 159,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.610Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "132",
+        "object_repr": "Lbc Common Brick 65mm",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 160,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.620Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "133",
+        "object_repr": "London Brick Company Facing Brick Commons &#8208; Pack Of 390",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 161,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.631Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "134",
+        "object_repr": "London Brick Company Lbc Heather Facing Brick 65mm",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 162,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.640Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "135",
+        "object_repr": "London Brick Company Lbc Heather Facing Brick 65mm",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 163,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.649Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "136",
+        "object_repr": "Lbc Heather Brick 65mm",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 164,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.661Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "137",
+        "object_repr": "London Brick Company Facing Brick Heather &#8208; Pack Of 390",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 165,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.670Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "138",
+        "object_repr": "London Brick Company Lbc Tudor Facing Brick 65mm",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 166,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.681Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "139",
+        "object_repr": "London Brick Company Lbc Tudor Facing Brick 65mm",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 167,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.691Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "140",
+        "object_repr": "Lbc Tudor Brick 65mm",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 168,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.701Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "141",
+        "object_repr": "London Brick Company Facing Brick Tudor &#8208; Pack Of 390",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 169,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.711Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "142",
+        "object_repr": "Class B Red Engineering Brick 65mm (Mixed Brands)",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 170,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.725Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "143",
+        "object_repr": "Class B Red Engineering Brick 65mm",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 171,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.735Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "144",
+        "object_repr": "Class B Engineering Brick (H)65mm (D)102.5mm (W)215mm",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 172,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.746Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "145",
+        "object_repr": "65mm Class B Engineering Brick",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 173,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.756Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "146",
+        "object_repr": "Wienerberger Terracotta Clay Class B Engineering Brick (H)65mm (W)215mm 2160G",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 174,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.767Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "147",
+        "object_repr": "Wienerberger Engineering Brick Red Perforated Class B 65mm &#8208; Pack Of 400",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 175,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.778Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "148",
+        "object_repr": "Concrete Brick Grey 65mm (Mixed Brands)",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 176,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.788Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "149",
+        "object_repr": "Grey Reconstituted Stone Concrete Common Brick (H)65mm (W)103mm (L)215mm 2.85Kg",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 177,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.797Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "150",
+        "object_repr": "Grey Reconstituted Stone Concrete Common Brick (H)65mm (W)103mm (L)215mm 2850G",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 178,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.808Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "151",
+        "object_repr": "Pd Edenhall Concrete Common 20N Solid Brick 65mm &#8208; Pack Of 448",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 179,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.819Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "152",
+        "object_repr": "Perforated Red Facing Brick 65mm (Mixed Brands)",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 180,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.830Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "153",
+        "object_repr": "Forterra Harrow Multi Red Facing Brick",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 181,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.839Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "154",
+        "object_repr": "Wickes Multi Red Facing Brick 65mm",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 182,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.850Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "155",
+        "object_repr": "Wienerberger Brick Red Clay Facing Brick (H)102.5mm (W)65mm (L)215mm 2.206Kg",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 183,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.860Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "156",
+        "object_repr": "Baggeridge Tabasco Red Brick",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 184,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.871Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "157",
+        "object_repr": "Wienerberger Brick Red Clay Facing Brick (H)102.5mm (W)65mm (L)215mm 2206G",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 185,
+    "fields": {
+        "action_time": "2018-08-28T21:36:30.881Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "158",
+        "object_repr": "Forterra Facing Brick Clumber Red &#8208; Pack Of 495",
+        "action_flag": 1,
+        "change_message": "new through import_export"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 186,
+    "fields": {
+        "action_time": "2018-11-09T21:17:23.844Z",
+        "user": [
+            "jake"
+        ],
+        "content_type": [
+            "products",
+            "product"
+        ],
+        "object_id": "159",
+        "object_repr": "tester 123",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}
+]

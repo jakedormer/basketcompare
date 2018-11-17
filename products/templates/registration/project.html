@@ -32,21 +32,35 @@
                             <h1>{{ master_item.product_description }}</h1>
                             <h2>Merchant Count : {{project.merchants.all.count}}</h2>
                             <h3>Items Count: {{project_items.count}}</h3>
-                            <p>{{ row }}</p>
+                            <p>{{ rows }}</p>
+                            <p> {{ jake }} </p>
+                            <p> {{ headers }} </p>
                             <div class="table-responsive">
                                 <table id="project-table" class="table tablesorter">
                                     <thead>
                                         <tr>
-                                            <th></th>
-                                            {% for data in row %}
-                                            <th>{{ data.merchant_id }}</th>
+                                            <th class="product-count"></th>
+                                            <th class ="product-image"></th>
+                                            <th>Product</th>
+                                            <th>Quantity</th>
+                                            {% for header in headers %}
+                                            <th class="merchant-logo"><img class="d-block mx-auto mb-1 shadow-sm" src="{{ MEDIA_URL }}merchant_logos/{{ header }}.png" height=50 width=50>
                                             {% endfor %}
+                                            </th>
+                                            
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        {% for item in row %}
                                         <tr>
-                                            <td>hi</td>
+                                            <td></td>
+
+                                            <td>{{ forloop.counter }}</td>
+                                            {% for attr in row %}
+                                            <td>{{ attr }}</td>
+                                            {% endfor %}
                                         </tr>
+                                        {% endfor %}
                                     </tbody>
                                 </table>
                             </div>
