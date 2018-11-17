@@ -34,14 +34,13 @@
                             <h3>Items Count: {{project_items.count}}</h3>
                             <p>{{ rows }}</p>
                             <p> {{ jake }} </p>
-                            <p> {{ headers }} </p>
                             <div class="table-responsive">
                                 <table id="project-table" class="table tablesorter">
                                     <thead>
                                         <tr>
                                             <th class="product-count"></th>
                                             <th class ="product-image"></th>
-                                            <th>Product</th>
+                                            <th class="w-25">Product</th>
                                             <th>Quantity</th>
                                             {% for header in headers %}
                                             <th class="merchant-logo"><img class="d-block mx-auto mb-1 shadow-sm" src="{{ MEDIA_URL }}merchant_logos/{{ header }}.png" height=50 width=50>
@@ -51,13 +50,12 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {% for item in row %}
+                                        {% for row in rows %}
                                         <tr>
                                             <td></td>
-
-                                            <td>{{ forloop.counter }}</td>
-                                            {% for attr in row %}
-                                            <td>{{ attr }}</td>
+                                            <td class="text-center">{{ forloop.counter }}</td>
+                                            {% for item in row %}
+                                            <td class="text-center">{{ item }}</td>
                                             {% endfor %}
                                         </tr>
                                         {% endfor %}

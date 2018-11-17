@@ -76,6 +76,14 @@ footer {
     background-color: #343a40;
 }
 
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
 
 /* Extra Bootstraps
 -------------------------------------------------- */
@@ -128,6 +136,10 @@ footer {
   width: 12.5%!important;
 }
 
+.w-25 {
+  width: 25%!important;
+}
+
 .text-gold {
   color:  #FFD700;
 }
@@ -146,4 +158,10 @@ footer {
 .no-bullets{
 list-style-type:none;
 margin-left: -1.25rem;
+}
+
+a.deco-none {
+    color: white !important;
+    text-decoration:none;
+
 }
