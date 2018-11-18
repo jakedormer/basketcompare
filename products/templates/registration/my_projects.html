@@ -12,9 +12,9 @@
     <div class="row">
         <div class="col-md-3 mt-3 ">
             <div class="list-group ">
-                <a href="/account" class="list-group-item list-group-item-action"><i class="fa fa-user"></i> My Account</a>
-                <a href="/favourites" class="list-group-item list-group-item-action"><i class="fa fa-star"></i> Favourites</a>
-                <a href="/my-projects" class="list-group-item list-group-item-action active"><i class="fas fa-th-list"></i> My Projects</a>
+                <a href="/account" class="list-group-item list-group-item-action bg-brown-hov"><i class="fa fa-user"></i> My Account</a>
+                <a href="/favourites" class="list-group-item list-group-item-action bg-brown-hov"><i class="fa fa-star"></i> Favourites</a>
+                <a href="/my-projects" class="list-group-item list-group-item-action active-brown bg-brown-hov text-white-hov"><i class="fas fa-th-list"></i> My Projects</a>
 
             </div>
         </div>
@@ -45,7 +45,7 @@
                             {% for project in projects %}
                                 <tr>
                                     <td class="row-number">{{ forloop.counter }}</td>
-                                    <td class="project-icon"><i class="fas fa-th-list fa-3x text-primary"></i></td>
+                                    <td class="project-icon"><i class="fas fa-th-list fa-3x text-brown"></i></td>
                                     <td class="project-name"><a href="/project/{{project.project_slug}}/">{{project.name|title}}</a></td>
                                     <td class="merchants-compared text-center">{{ project.merchants.all.count }}</td>
                                     <td class="project-items text-secondary">{{ project.project_items.count }}</td>

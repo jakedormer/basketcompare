@@ -16,13 +16,23 @@
     <div class="row">
         <div class="col-md-3 mt-3 ">
             <div class="list-group ">
-                <a href="/account" class="list-group-item list-group-item-action"><i class="fa fa-user"></i> My Account</a>
-                <a href="/favourites" class="list-group-item list-group-item-action active"><i class="fa fa-star"></i> Favourites</a>
-                <a href="/my-projects" class="list-group-item list-group-item-action"><i class="fas fa-th-list"></i> My Projects</a>
+                <a href="/account" class="list-group-item list-group-item-action bg-brown-hov"><i class="fa fa-user"></i> My Account</a>
+                <a href="/favourites" class="list-group-item active-brown text-white-hov bg-brown-hov"><i class="fa fa-star"></i> Favourites</a>
+                <a href="/my-projects" class="list-group-item list-group-item-action bg-brown-hov"><i class="fas fa-th-list"></i> My Projects</a>
             </div>
         </div>
-        <div class="col-md-9 card mt-3">
-        <div class="table-responsive mt-3">
+        <div class="col-md-9 mt-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                        <div class="col-md-12">
+                            <!-- <h4>Favourites</h4>
+                            <hr> -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+        <div class="table-responsive mt-1">
         {% if favourites %}
         <table id="comparison-table" class="table">
             <thead>
@@ -39,7 +49,7 @@
         {% for product in favourites %}
                 <tr>
                     <td class="row-number">{{ forloop.counter }}</td>
-                    <td class="product-image"><img src="/media/blue-circle.jpg" height=70 width=70></td>
+                    <td class="product-image"><img src="/media/blue-circle.jpg" height=40 width=40></td>
                     <td class="description"><a href="/{{product.product_slug}}/p/{{product.bc_sku}}">{{ product.product_description }}</a></td>
                     <td class="min-price incVat text-success text-center font-weight-bold fs-13">£{{ product.min_price }}</td>
                     <td class="min-price exVat text-success text-center font-weight-bold fs-13">£{{ product.min_price|div:1.2|floatformat:2 }}</td>
@@ -54,6 +64,10 @@
                 {% endfor %}
             </tbody>
         </table>
+    </div>
+</div>
+</div>
+</div>
         <!-- VAT-->
         <div class="mb-5 d-flex justify-content-center">
             <button type="button" class="btn btn-outline-danger d-flex justify-content-center fixed-button" id="vat-button" onclick="myFunction()">inc Vat</button>
