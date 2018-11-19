@@ -44,11 +44,15 @@ td {
 -------------------------------------------------- */
 
 .fixed-button-atp {
-    width: 185px;
+    width: 151px;
+}
+
+.quantity-button {
+    width: 40px;
 }
 
 .fixed-button {
-    width: 234px;
+    width: 200px;
 }
 
 .atp-input {
@@ -58,5 +62,4 @@ td {
     width: 44px;
     padding-top:4px;
     padding-bottom: 8px;
-    display: we;
 }

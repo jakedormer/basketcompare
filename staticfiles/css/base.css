@@ -52,10 +52,6 @@ body {
 /* Footer
 -------------------------------------------------- */
 
-.page-footer {
-    background-color: #343a40;
-    color: white;
-}
 
 .footer-copyright {
 	background-color:white;
@@ -68,8 +64,17 @@ footer {
 
 }
 
-.footer-link a {
-	color: white;
+
+.sub-nav:hover { 
+    background-color: #343a40;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }
 
 
@@ -124,6 +129,54 @@ footer {
   width: 12.5%!important;
 }
 
+.w-25 {
+  width: 25%!important;
+}
+
 .text-gold {
   color:  #FFD700;
+}
+
+.icon-submit {
+  background: none;
+  padding: 0px;
+  border: none;
+  cursor: pointer;
+}
+
+.bg-brown {
+  background-color: #7c492e;
+}
+
+.no-bullets{
+list-style-type:none;
+margin-left: -1.25rem;
+}
+
+a.deco-none {
+    color: white !important;
+    text-decoration:none;
+
+}
+
+.bg-brown-hov:hover {
+  background-color: #54311f;
+  color: white;
+}
+
+.text-10 {
+  font-size: 10px;
+}
+
+.active-brown {
+  background-color: #7c492e;
+  color: white; 
+}
+
+a.text-white-hov:hover {
+    color: white;
+}
+
+.text-brown {
+  color: #7c492e;;
 }
