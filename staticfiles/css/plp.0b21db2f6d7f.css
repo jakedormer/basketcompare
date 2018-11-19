@@ -1,0 +1,32 @@
+/* Cards
+-------------------------------------------------- */
+
+.box-shadow { 
+	box-shadow: 0.25rem 0.75rem rgba(0, 0, 0, .05); 
+}
+
+p.card-text {
+    height: 65px;
+}
+
+.card {
+  border-radius: 2.25rem;
+
+}
+
+.card-img-top {
+  border-bottom: 5px solid #7c492e;
+}
+
+.pagination_cont{
+	margin-top:10px;
+}
+
+.plp-price {
+	color: #00C851!important;
+	font-weight: bold;
+}
+
+.plp-description {
+	margin-bottom: 10px!important;
+}

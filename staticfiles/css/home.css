@@ -1,0 +1,82 @@
+/* General
+-------------------------------------------------- */
+
+body {
+    padding-top: ;
+  }
+
+
+
+/* Jumbotron
+-------------------------------------------------- */
+
+.home-title {
+	color:white;
+  font-weight: 500;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  text-align:center;
+  align-items: center;
+  padding-top: 85px;
+
+}
+
+
+
+@media screen and (max-width: 750px) {
+  h1 {
+    font-size: 50px!important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 45px!important;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  h1 {
+    font-size: 35px!important;
+  }
+}
+
+
+/* Jumbotron
+-------------------------------------------------- */
+
+.home-bg {
+	background-image: url("/static/media/home/depot.jpg");
+  background-position: center bottom; 
+	background-repeat: no-repeat;
+  filter: brightness(50%)
+	background-size: cover;
+  width: 100%;
+  margin: 0;
+  top: 0;
+  margin-bottom: 2em;
+  height: 300px;
+
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: 400;
+}
+.marketing .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+
+
+/* CATEGORY CARDS
+-------------------------------------------------- */
+.box-shadow { 
+  box-shadow: 0.25rem 0.75rem rgba(0, 0, 0, .05); 
+}
