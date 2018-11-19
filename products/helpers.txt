@@ -53,6 +53,14 @@ If making a change to a static file.
 2) Push to git.
 
 
+How to solve this cunty error
+"Missing staticfiles manifest entry for 'css/favourites.css'"
+Same as below. Fucking annoying.
+
+How to get fucking static to update on heroku
+delete all css for /staticfiles. Run collectstatic. Push to heroku.
+
+
 <!-- {% static "" as base_url %} -->
 
 <!-- <td class="merchant-logo"><img class="d-block mx-auto mb-1 shadow-sm" src="{{ base_url }}media/merchant_logos/{{ item.merchant}}.png" height=70 width=70> -->
