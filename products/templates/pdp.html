@@ -57,9 +57,9 @@
                 <input type="number" name="project_quantity" class="atp-input text-center" value=1 min=1>
                 <div class="dropdown d-inline">
                     <button class="btn btn-primary fixed-button-atp dropdown-toggle" type="button" id="dropdownMenuButton"> Add to Project <i class="fas fa-angle-down"></i></button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <div class="dropdown-menu p-0" aria-labelledby="dropdownMenuButton">
                         {% for project in projects %}
-                        <div class="ml-2 form-check dropdown-item">
+                        <div class="pl-4 form-check dropdown-item pt-2 bg-brown-hov">
                             <input class="form-check-input" type="radio" name="project_slug" value="{{project.project_slug}}">
                             <label class="form-check-label"> {{project.name|title}}</label>
                         </div>
@@ -71,6 +71,8 @@
                     </div>
                 </div>
             </form>
+            {% else %}
+            <button class="btn btn-primary fixed-button" type="button" data-container="body" data-toggle="popover" data-placement="top" data-content="Please create an account."> Add to Project <i class="fas fa-angle-down"></i></button>
             {% endif %}
         </div>
   
@@ -85,10 +87,10 @@
                 </button>
                 </form>
                 {% else %}
-                <button type="button" class="btn btn-outline-warning" data-container="body" data-toggle="popover" data-placement="top" data-content="You can only have 10 favourite products. Please go to favourites to remove some."><i class="fa fa-star"></i> Favourite
+                <button type="button" class="btn btn-outline-warning fixed-button" data-container="body" data-toggle="popover" data-placement="top" data-content="You can only have 10 favourite products. Please go to favourites to remove some."><i class="fa fa-star"></i> Favourite
                 </button>
                 {% endif %} {% else %}
-                <button type="button" class="btn btn-outline-warning" data-container="body" data-toggle="popover" data-placement="top" data-content="Please create an account."><i class="fa fa-star"></i> Favourite
+                <button type="button" class="btn btn-outline-warning fixed-button" data-container="body" data-toggle="popover" data-placement="top" data-content="Please create an account."><i class="fa fa-star"></i> Favourite
                 </button>
                 {% endif %}
         </div>    
