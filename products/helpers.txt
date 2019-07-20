@@ -79,3 +79,12 @@ from django.db import connection
 
 user = User.objects.get(username="jake")
 
+To do list:
+1) Pivot table
+2) Scrapers automated in heroku
+3) Product images on amazon
+4) category images on amazon s3
+5) match file storage
+6) New matching and seed product creation
+7) 
+

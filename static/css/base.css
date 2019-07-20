@@ -1,5 +1,6 @@
 body {
     padding-top: 58px;
+    padding-bottom:50px;
   }
 
 /* Navigation
@@ -178,5 +179,15 @@ a.text-white-hov:hover {
 }
 
 .text-brown {
-  color: #7c492e;;
+  color: #7c492e;
 }
+
+
+/* Colours
+
+#1f5f2dGreen
+
+#7c492eBrown 
+
+
+*/

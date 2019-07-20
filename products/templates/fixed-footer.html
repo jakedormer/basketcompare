@@ -1,24 +1,28 @@
-<div class="footer d-xl-none bg-brown text-white">
+<div class="footer bg-brown text-white">
 	<div class="row text-center">
 		<div class="col bg-brown-hov border border-light p-0">
-			<a class="deco-none w-100 d-block pt-1" href="/favourites">
+			<a class="deco-none w-100 d-block pt-1" href="{% url 'favourites' %}">
 			<i class="fa fa-star fa-1x"></i>
 			<br>
   			<p class="m-0 f-text">Favourites</p>
   			</a>
   		</div>
 		<div class="col bg-brown-hov border border-light p-0">
-			<a class="deco-none w-100 d-block pt-1" href="/my-projects">
+			<a class="deco-none w-100 d-block pt-1" href="{% url 'my-projects' %}">
 			<i class="fa fa-clipboard-list fa-1x"></i>
 			<br>
   			<p class="m-0 f-text">My Projects</p>
   			</a>
   		</div>
 		<div class="col bg-brown-hov border border-light p-0">
-			<a class="deco-none w-100 d-block pt-1 text-center" href="/account">
+			<a class="deco-none w-100 d-block pt-1 text-center" href="{% url 'account' %}">
 			<i class="fa fa-user fa-1x"></i>
 			<br>
+			{% if user.is_authenticated %}
   			<p class="m-0 f-text">My Account</p>
+  			{% else %}
+  			<p class="m-0 f-text">Login</p>
+  			{% endif %}
   			</a>
   		</div>
 

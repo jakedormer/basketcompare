@@ -202,7 +202,7 @@ def account(request):
 		template = 'registration/account.html'
 		return render(request,template,context)
 	else:
-		return redirect('/login')
+		return redirect('login')
 
 def my_projects(request):
 	user = request.user

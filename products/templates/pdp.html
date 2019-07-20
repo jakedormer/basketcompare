@@ -23,8 +23,8 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/category">Categories</a></li>
-            <li class="breadcrumb-item"><a href="#">{{ master_product.category }}</a></li>
-            <li class="breadcrumb-item active" aria-current="page">{{ master_product.sub_category }}</li>
+            <li class="breadcrumb-item"><a href="/category/{{ master_product.category.category_slug }}">{{ master_product.category }}</a></li>
+            <li class="breadcrumb-item active"><a href="/c/{{ master_product.sub_category.subcategory_slug }}">{{ master_product.sub_category }}</a></li>
         </ol>
     </nav>
 </div>
