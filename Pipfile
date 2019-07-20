@@ -13,10 +13,6 @@ gunicorn = "*"
 dj-database-url = "*"
 "psycopg2-binary" = "*"
 raven = "*"
-requests = "*"
-"beautifulsoup4" = "*"
-"boto3" = "*"
-multiprocessing = "*"
 
 [dev-packages]
 
